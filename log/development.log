@@ -893,3 +893,36 @@ Migrating to CreateActivities (20180909062743)
   [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4638495710780385720)[0m
   [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-09 12:09:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YL1mTyd6FM5ZAKZ93w7rL4ZGV1eysrd1yLWloJ6J3z9SrBFlm4cwMq5TldiDKHmhqRSAwF+5c1LlkZzlcvTc3w==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (562.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vijay@aura.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 12656ms (ActiveRecord: 562.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-09 12:10:17 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (153.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (243.6ms)
+  Rendered layouts/_navigation_links.html.erb (42.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (93.9ms)
+  Rendered layouts/_navigation.html.erb (281.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 11867ms (Views: 11288.0ms | ActiveRecord: 153.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-09 12:11:39 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (173.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (67.8ms)
+  Rendered layouts/_navigation.html.erb (160.7ms)
+  Rendered layouts/_messages.html.erb (18.6ms)
+Completed 200 OK in 2580ms (Views: 2335.1ms | ActiveRecord: 173.8ms)
+
+
