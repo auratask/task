@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  task_consumer_no: MyString
+  status: MyString
+  cheque_cash_detail: MyString
+  instruction: MyString
+  activity: MyString
+  allocated_to: MyString
+  priority: MyString
+
+two:
+  task_consumer_no: MyString
+  status: MyString
+  cheque_cash_detail: MyString
+  instruction: MyString
+  activity: MyString
+  allocated_to: MyString
+  priority: MyString

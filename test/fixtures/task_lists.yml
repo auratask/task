@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  expense: 1
+  allocated_to: MyString
+  task_list_date: 2018-09-09 11:55:18
+
+two:
+  expense: 1
+  allocated_to: MyString
+  task_list_date: 2018-09-09 11:55:18
