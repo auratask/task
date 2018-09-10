@@ -926,3 +926,987 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 2580ms (Views: 2335.1ms | ActiveRecord: 173.8ms)
 
 
+  [1m[36mTaskk Load (121.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (96.2ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "101"], ["status", "Done"], ["activity", "R"], ["allocated_to", "Sonu"], ["created_at", "2018-09-09 07:29:07.965069"], ["updated_at", "2018-09-09 07:29:07.965069"]]
+  [1m[35m (147.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (2.3ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-10 14:58:32 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (36.0ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 731ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-10 14:58:38 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (134.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (2.0ms)
+  Rendered layouts/_navigation.html.erb (53.2ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 6858ms (Views: 6417.3ms | ActiveRecord: 382.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-10 14:59:33 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"i2Agy4XhWPM3piekatqKPpN66RvEmeskO0enI1SI/6XOtxmlbzu1gFHBWZRFl1TJItIcDsh3+mmxz3OXf8M+MQ==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (230.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vijay@aura.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1136ms (ActiveRecord: 230.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 14:59:34 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (2.3ms)
+  Rendered layouts/_navigation.html.erb (64.7ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 414ms (Views: 374.3ms | ActiveRecord: 1.6ms)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2018-09-10 15:00:34 +0530
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3TXCAv/VAQiiAk/ekJNyRJW9W/9nSJsxCPvHzeHlJ/bPX1f4Xopf9Vyh88gULXB6GuqEH/azTFaFtIY5mOC0LQ=="}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (28.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1027ms (ActiveRecord: 30.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 15:00:35 +0530
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-10 15:00:35 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (8.0ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 926ms (Views: 924.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[36mTaskk Load (52.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (86.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "102"], ["status", "Not Done"], ["activity", "PC"], ["allocated_to", "Rohit"], ["created_at", "2018-09-10 09:46:34.276363"], ["updated_at", "2018-09-10 09:46:34.276363"]]
+  [1m[35m (84.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (93.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (36.0ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "102"], ["status", "Do it on Date"], ["activity", "R"], ["allocated_to", "swapnil"], ["created_at", "2018-09-10 10:24:42.880617"], ["updated_at", "2018-09-10 10:24:42.880617"]]
+  [1m[35m (87.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "102"], ["status", "Done"], ["activity", "R"], ["allocated_to", "swapnil"], ["created_at", "2018-09-10 10:24:59.832606"], ["updated_at", "2018-09-10 10:24:59.832606"]]
+  [1m[35m (23.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:45:28 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (68.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 508ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-09-10 16:45:38 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (282.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (2.2ms)
+  Rendered layouts/_navigation.html.erb (119.4ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 6624ms (Views: 6491.6ms | ActiveRecord: 56.2ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-09-10 16:46:03 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wTZb0osgidqukQGFhm4yvIYzPTh9/C6XUUH5l11VZhjU1bpzP8SfiZyc6knQHjUMHEYRQHLfRh/i/oallsf8IA==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (263.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vijay@aura.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 1063ms (ActiveRecord: 263.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:46:04 +0530
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (6.1ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 232ms (Views: 169.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:48:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  Rendered taskks/index.html.erb within layouts/application (21.4ms)
+Completed 500 Internal Server Error in 17994ms (ActiveRecord: 7.9ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/taskks/index.html.erb:9: syntax error, unexpected '<'
+  <p>
+   ^
+/home/rahul/task/app/views/taskks/index.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_append='<!--End of Search Box-->
+                                      ^
+/home/rahul/task/app/views/taskks/index.html.erb:13: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/rahul/task/app/views/taskks/index.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+   <p class="text-success"><stron...
+    ^
+/home/rahul/task/app/views/taskks/index.html.erb:17: syntax error, unexpected '<'
+   <p class="text-success"><strong>Edit</strong> via clic...
+                            ^
+/home/rahul/task/app/views/taskks/index.html.erb:17: unknown regexp option - p
+/home/rahul/task/app/views/taskks/index.html.erb:18: syntax error, unexpected '<'
+<table border="1" cellpadding="5" cellspacing="5">
+ ^
+/home/rahul/task/app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<table border="1" cellpadding="5" cellspacing="5">
+                             ^
+/home/rahul/task/app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<table border="1" cellpadding="5" cellspacing="5">
+                                             ^
+/home/rahul/task/app/views/taskks/index.html.erb:19: syntax error, unexpected '<'
+  <tr>
+   ^
+/home/rahul/task/app/views/taskks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <th>Consumer No</th>
+                   ^
+/home/rahul/task/app/views/taskks/index.html.erb:21: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:22: syntax error, unexpected '<'
+    <th>Phone Number</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <th>Phone Number</th>
+                    ^
+/home/rahul/task/app/views/taskks/index.html.erb:23: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:24: syntax error, unexpected '<'
+    <th>Area</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:25: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:26: syntax error, unexpected '<'
+    <th>Machine Count</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <th>Machine Count</th>
+                     ^
+/home/rahul/task/app/views/taskks/index.html.erb:27: unknown regexp options - tr
+/home/rahul/task/app/views/taskks/index.html.erb:31: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:32: unknown regexp options - td
+empty char-class: /td>
+      <td>'.freeze;@output_buffer.append=( check_box_tag "tag_ids[]",customer.id, false, {multiple: true}  );@output_buffer.safe_append='</
+/home/rahul/task/app/views/taskks/index.html.erb:33: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:34: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:35: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:36: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:37: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:38: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:42: unknown regexp options - tabl
+/home/rahul/task/app/views/taskks/index.html.erb:43: syntax error, unexpected '<'
+/home/rahul/task/app/views/taskks/index.html.erb:56: unknown regexp option - p
+/home/rahul/task/app/views/taskks/index.html.erb:56: unterminated string meets end of file
+/home/rahul/task/app/views/taskks/index.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/taskks/index.html.erb:9: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:13: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+app/views/taskks/index.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+app/views/taskks/index.html.erb:17: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:17: unknown regexp option - p
+app/views/taskks/index.html.erb:18: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/taskks/index.html.erb:19: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:21: unknown regexp options - th
+app/views/taskks/index.html.erb:22: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:23: unknown regexp options - th
+app/views/taskks/index.html.erb:24: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:25: unknown regexp options - th
+app/views/taskks/index.html.erb:26: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:27: unknown regexp options - tr
+app/views/taskks/index.html.erb:31: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:32: unknown regexp options - td
+app/views/taskks/index.html.erb:33: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:34: unknown regexp options - td
+app/views/taskks/index.html.erb:35: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:36: unknown regexp options - td
+app/views/taskks/index.html.erb:37: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:38: unknown regexp options - td
+app/views/taskks/index.html.erb:42: unknown regexp options - tabl
+app/views/taskks/index.html.erb:43: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:56: unknown regexp option - p
+app/views/taskks/index.html.erb:56: unterminated string meets end of file
+app/views/taskks/index.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.0ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.8ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (93.4ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:50:03 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  Rendered taskks/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 3004ms (ActiveRecord: 3.8ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/taskks/index.html.erb:9: syntax error, unexpected '<'
+  <p></p>
+   ^
+/home/rahul/task/app/views/taskks/index.html.erb:17: unknown regexp options - trg
+/home/rahul/task/app/views/taskks/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...rong>Edit</strong> via clicking the Customer Number</p>
+...                               ^
+/home/rahul/task/app/views/taskks/index.html.erb:20: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:21: syntax error, unexpected '<'
+    <th>Name</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:22: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:23: syntax error, unexpected '<'
+    <th>Address</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:24: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:25: syntax error, unexpected '<'
+    <th>Flavors</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:26: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:27: syntax error, unexpected '<'
+  </tr>
+   ^
+/home/rahul/task/app/views/taskks/index.html.erb:31: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:32: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:33: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:34: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:35: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:36: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:37: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:38: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:40: unknown regexp options - tr
+/home/rahul/task/app/views/taskks/index.html.erb:45: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:49: syntax error, unexpected '<', expecting keyword_end
+/home/rahul/task/app/views/taskks/index.html.erb:53: syntax error, unexpected ':', expecting keyword_end
+/home/rahul/task/app/views/taskks/index.html.erb:56: syntax error, unexpected '<', expecting keyword_end
+</p>'.freeze;@output_buffer.to_s
+ ^
+/home/rahul/task/app/views/taskks/index.html.erb:56: unterminated regexp meets end of file):
+  
+app/views/taskks/index.html.erb:9: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:17: unknown regexp options - trg
+app/views/taskks/index.html.erb:17: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:20: unknown regexp options - th
+app/views/taskks/index.html.erb:21: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:22: unknown regexp options - th
+app/views/taskks/index.html.erb:23: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:24: unknown regexp options - th
+app/views/taskks/index.html.erb:25: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:26: unknown regexp options - th
+app/views/taskks/index.html.erb:27: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:31: unknown regexp options - td
+app/views/taskks/index.html.erb:32: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:33: unknown regexp options - td
+app/views/taskks/index.html.erb:34: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:35: unknown regexp options - td
+app/views/taskks/index.html.erb:36: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:37: unknown regexp options - td
+app/views/taskks/index.html.erb:38: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:40: unknown regexp options - tr
+app/views/taskks/index.html.erb:45: unknown regexp options - th
+app/views/taskks/index.html.erb:49: syntax error, unexpected '<', expecting keyword_end
+app/views/taskks/index.html.erb:53: syntax error, unexpected ':', expecting keyword_end
+app/views/taskks/index.html.erb:56: syntax error, unexpected '<', expecting keyword_end
+app/views/taskks/index.html.erb:56: unterminated regexp meets end of file
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.4ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:50:31 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  Rendered taskks/index.html.erb within layouts/application (2.6ms)
+Completed 500 Internal Server Error in 3190ms (ActiveRecord: 2.0ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/taskks/index.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+@output_buffer.safe_append='<!--End of Search Box-->
+                                      ^
+/home/rahul/task/app/views/taskks/index.html.erb:13: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+/home/rahul/task/app/views/taskks/index.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+   <p class="text-success"><stron...
+    ^
+/home/rahul/task/app/views/taskks/index.html.erb:17: syntax error, unexpected '<'
+   <p class="text-success"><strong>Edit</strong> via clic...
+                            ^
+/home/rahul/task/app/views/taskks/index.html.erb:17: unknown regexp option - p
+/home/rahul/task/app/views/taskks/index.html.erb:18: syntax error, unexpected '<'
+<table border="1" cellpadding="5" cellspacing="5">
+ ^
+/home/rahul/task/app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<table border="1" cellpadding="5" cellspacing="5">
+                             ^
+/home/rahul/task/app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+<table border="1" cellpadding="5" cellspacing="5">
+                                             ^
+/home/rahul/task/app/views/taskks/index.html.erb:19: syntax error, unexpected '<'
+  <tr>
+   ^
+/home/rahul/task/app/views/taskks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <th>Consumer No</th>
+                   ^
+/home/rahul/task/app/views/taskks/index.html.erb:21: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:22: syntax error, unexpected '<'
+    <th>Phone Number</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <th>Phone Number</th>
+                    ^
+/home/rahul/task/app/views/taskks/index.html.erb:23: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:24: syntax error, unexpected '<'
+    <th>Area</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:25: unknown regexp options - th
+/home/rahul/task/app/views/taskks/index.html.erb:26: syntax error, unexpected '<'
+    <th>Machine Count</th>
+     ^
+/home/rahul/task/app/views/taskks/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+    <th>Machine Count</th>
+                     ^
+/home/rahul/task/app/views/taskks/index.html.erb:27: unknown regexp options - tr
+/home/rahul/task/app/views/taskks/index.html.erb:31: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:32: unknown regexp options - td
+empty char-class: /td>
+      <td>'.freeze;@output_buffer.append=( check_box_tag "tag_ids[]",customer.id, false, {multiple: true}  );@output_buffer.safe_append='</
+/home/rahul/task/app/views/taskks/index.html.erb:33: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:34: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:35: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:36: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:37: syntax error, unexpected '<'
+      <td>'.freeze;@output_buffer.ap...
+       ^
+/home/rahul/task/app/views/taskks/index.html.erb:38: unknown regexp options - td
+/home/rahul/task/app/views/taskks/index.html.erb:42: unknown regexp options - tabl
+/home/rahul/task/app/views/taskks/index.html.erb:43: syntax error, unexpected '<'
+/home/rahul/task/app/views/taskks/index.html.erb:56: unknown regexp option - p
+/home/rahul/task/app/views/taskks/index.html.erb:56: unterminated string meets end of file
+/home/rahul/task/app/views/taskks/index.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/taskks/index.html.erb:13: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:13: syntax error, unexpected '\n', expecting keyword_do_LAMBDA or tLAMBEG
+app/views/taskks/index.html.erb:17: syntax error, unexpected '<', expecting keyword_end
+app/views/taskks/index.html.erb:17: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:17: unknown regexp option - p
+app/views/taskks/index.html.erb:18: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/taskks/index.html.erb:18: syntax error, unexpected tIDENTIFIER, expecting keyword_end
+app/views/taskks/index.html.erb:19: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:20: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:21: unknown regexp options - th
+app/views/taskks/index.html.erb:22: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:22: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:23: unknown regexp options - th
+app/views/taskks/index.html.erb:24: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:25: unknown regexp options - th
+app/views/taskks/index.html.erb:26: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:26: syntax error, unexpected tCONSTANT, expecting keyword_do or '{' or '('
+app/views/taskks/index.html.erb:27: unknown regexp options - tr
+app/views/taskks/index.html.erb:31: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:32: unknown regexp options - td
+app/views/taskks/index.html.erb:33: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:34: unknown regexp options - td
+app/views/taskks/index.html.erb:35: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:36: unknown regexp options - td
+app/views/taskks/index.html.erb:37: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:38: unknown regexp options - td
+app/views/taskks/index.html.erb:42: unknown regexp options - tabl
+app/views/taskks/index.html.erb:43: syntax error, unexpected '<'
+app/views/taskks/index.html.erb:56: unknown regexp option - p
+app/views/taskks/index.html.erb:56: unterminated string meets end of file
+app/views/taskks/index.html.erb:56: syntax error, unexpected end-of-input, expecting keyword_end
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.6ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.5ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.5ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:52:37 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  Rendered taskks/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 2928ms (ActiveRecord: 1.8ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/taskks/index.html.erb:44: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  
+app/views/taskks/index.html.erb:44: syntax error, unexpected keyword_ensure, expecting end-of-input
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (42.9ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:54:55 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (5.1ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (65.5ms)
+Completed 500 Internal Server Error in 2929ms (ActiveRecord: 12.6ms)
+
+
+  
+ActionView::Template::Error (undefined method `do_it_on_tasks' for #<Class:0xa28a3c0>
+Did you mean?  do_it_on_date_tasks):
+    1: <p>List of Tasks in the particular order</p>
+    2: <p> Not Done Count: <%=Taskk.not_done_tasks(@tasks).count%></p>
+    3: <p> Do it on Done Count: <%= Taskk.do_it_on_tasks(@tasks).count %> </p>
+    4:    <p class="text-success"><strong>Edit</strong> via clicking the Customer Number</p>
+    5: <table border="1" cellpadding="5" cellspacing="5">
+    6:   <tr>
+  
+app/views/taskks/index.html.erb:3:in `_app_views_taskks_index_html_erb___818206908_92644730'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.8ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 16:55:22 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (10.7ms)
+Completed 500 Internal Server Error in 2785ms (ActiveRecord: 2.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `consumer_no' for #<Hash:0xb40af190>):
+    15:  
+    16:   <% @customers.each do |customer| %>
+    17:     <tr>
+    18:       <td><%= link_to customer.consumer_no, edit_taskk_path(task) %></td>
+    19:       <td><%= customer.name %></td>
+    20:       <td><%= customer.phone_number %></td>
+    21:       <td><%= customer.address %></td>
+  
+app/views/taskks/index.html.erb:18:in `block in _app_views_taskks_index_html_erb___818206908__636870688'
+app/views/taskks/index.html.erb:16:in `each'
+app/views/taskks/index.html.erb:16:in `_app_views_taskks_index_html_erb___818206908__636870688'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.6ms)
+  [1m[36mUser Load (72.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:00:31 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (760.9ms)
+Completed 500 Internal Server Error in 3430ms (ActiveRecord: 4.0ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `task' for #<#<Class:0xadb437c>:0xafef614>
+Did you mean?  taskk_url
+               @tasks):
+    15:  
+    16:   <% @customers.each do |customer| %>
+    17:     <tr>
+    18:       <td><%= link_to customer["consumer_no"], edit_taskk_path(task) %></td>
+    19:       <td><%= customer["name"] %></td>
+    20:       <td><%= customer["phone_number"] %></td>
+    21:       <td><%= customer["address"] %></td>
+  
+app/views/taskks/index.html.erb:18:in `block in _app_views_taskks_index_html_erb___818206908_92276030'
+app/views/taskks/index.html.erb:16:in `each'
+app/views/taskks/index.html.erb:16:in `_app_views_taskks_index_html_erb___818206908_92276030'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.5ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.3ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:02:13 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (6.5ms)
+Completed 500 Internal Server Error in 6432ms (ActiveRecord: 2.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    14:   </tr>
+    15:  
+    16:   <% @customers.each do |customer| %>
+    17:   <% @done_tasks.each do |task| %>
+    18:     <tr>
+    19:       <td><%= link_to customer["consumer_no"], edit_taskk_path(task) %></td>
+    20:       <td><%= customer["name"] %></td>
+  
+app/views/taskks/index.html.erb:17:in `block in _app_views_taskks_index_html_erb___818206908__633682158'
+app/views/taskks/index.html.erb:16:in `each'
+app/views/taskks/index.html.erb:16:in `_app_views_taskks_index_html_erb___818206908__633682158'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (9.2ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.1ms)
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:03:12 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (90.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (52.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 7372ms (Views: 4563.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:04:21 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (81.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 3287ms (Views: 200.0ms | ActiveRecord: 2.9ms)
+
+
+  [1m[35m (16.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4638495710780385720);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddFieldsToTaskks (20180910120617)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (319.7ms)[0m  [1m[35mALTER TABLE "taskks" ADD "customer_name" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "taskks" ADD "customer_phone_number" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "taskks" ADD "customer_address" text[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "taskks" ADD "customer_area" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "taskks" ADD "customer_flavors" character varying[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "taskks" ADD "customer_machine_count" integer[0m
+  [1m[35mSQL (14.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180910120617"]]
+  [1m[35m (37.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (30.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4638495710780385720)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (22.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:38:10 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (1.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (25.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (1000.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (27.2ms)
+  Rendered layouts/_navigation.html.erb (166.5ms)
+  Rendered layouts/_messages.html.erb (5.6ms)
+Completed 200 OK in 8516ms (Views: 3357.7ms | ActiveRecord: 167.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:39:06 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (8.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (74.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (75.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 13186ms (Views: 715.3ms | ActiveRecord: 10.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:40:14 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (11.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (10.2ms)
+  Rendered layouts/_navigation_links.html.erb (12.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (9.9ms)
+  Rendered layouts/_navigation.html.erb (91.9ms)
+  Rendered layouts/_messages.html.erb (12.5ms)
+Completed 200 OK in 5416ms (Views: 1179.8ms | ActiveRecord: 12.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 17:40:41 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (20.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (32.9ms)
+  Rendered layouts/_navigation.html.erb (91.9ms)
+  Rendered layouts/_messages.html.erb (28.4ms)
+Completed 200 OK in 4248ms (Views: 787.3ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/taskks/1/edit" for 127.0.0.1 at 2018-09-10 17:42:36 +0530
+Processing by TaskksController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering taskks/edit.html.erb within layouts/application
+  Rendered taskks/edit.html.erb within layouts/application (45.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (10.9ms)
+  Rendered layouts/_navigation.html.erb (73.4ms)
+  Rendered layouts/_messages.html.erb (1.6ms)
+Completed 200 OK in 1511ms (Views: 1468.1ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (21.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (59.1ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (2.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (1.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (41.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (209.2ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "103"], ["status", "Do it on Date"], ["activity", "R"], ["allocated_to", "swapnil"], ["created_at", "2018-09-10 13:08:18.604625"], ["updated_at", "2018-09-10 13:08:18.604625"]]
+  [1m[35m (22.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (14.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (25.2ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "103"], ["status", "Do it on Date"], ["activity", "R"], ["allocated_to", "swapnil"], ["created_at", "2018-09-10 13:09:16.205328"], ["updated_at", "2018-09-10 13:09:16.205328"]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "103"], ["status", "Do it on Date"], ["activity", "R"], ["allocated_to", "swapnil"], ["created_at", "2018-09-10 13:09:44.380060"], ["updated_at", "2018-09-10 13:09:44.380060"]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (8.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "updated_at" = $7 WHERE "taskks"."id" = $8[0m  [["customer_name", "Dena Bank"], ["customer_phone_number", "0251 2713278/ 8898777555"], ["customer_address", "Furniture Bazar, Ulhasnagar 2"], ["customer_area", "Ulhasnager 2"], ["customer_flavors", "Lavender"], ["customer_machine_count", 4], ["updated_at", "2018-09-10 13:09:44.402989"], ["id", 7]]
+  [1m[35m (11.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (34.9ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-09-10 18:40:48 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (14.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (19841.3ms)
+  Rendered layouts/_navigation_links.html.erb (80.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (71.9ms)
+  Rendered layouts/_navigation.html.erb (280.6ms)
+  Rendered layouts/_messages.html.erb (249.9ms)
+Completed 200 OK in 123934ms (Views: 49934.9ms | ActiveRecord: 203.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 18:45:28 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (78.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (9.3ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (930.0ms)
+  Rendered layouts/_navigation_links.html.erb (27.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (43.0ms)
+  Rendered layouts/_navigation.html.erb (303.3ms)
+  Rendered layouts/_messages.html.erb (94.4ms)
+Completed 200 OK in 20714ms (Views: 10553.4ms | ActiveRecord: 88.6ms)
+
+
+  [1m[36mTaskk Load (1028.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (27.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (6.4ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  [1m[35m (12.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (141.2ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "activity", "allocated_to", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["task_consumer_no", "113"], ["status", "Done"], ["activity", "R"], ["allocated_to", "swapnil"], ["created_at", "2018-09-10 13:18:09.029631"], ["updated_at", "2018-09-10 13:18:09.029631"]]
+  [1m[35m (62.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (67.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (39.4ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "updated_at" = $7 WHERE "taskks"."id" = $8[0m  [["customer_name", "Shri Omkar Constructions"], ["customer_phone_number", " 093211 29361"], ["customer_address", "Malhar Sankul, off Agra Road, kalyan west"], ["customer_area", ""], ["customer_flavors", "spllemon 3"], ["customer_machine_count", 3], ["updated_at", "2018-09-10 13:18:17.668174"], ["id", 8]]
+  [1m[35m (29.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (13.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-10 18:48:32 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (662.5ms)
+  Rendered layouts/_navigation_links.html.erb (94.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (2738.0ms)
+  Rendered layouts/_messages.html.erb (165.3ms)
+Completed 200 OK in 17422ms (Views: 13258.0ms | ActiveRecord: 1.9ms)
+
+
+  [1m[35m (194.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-10 18:56:42 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (61.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (4412.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (217.6ms)
+  Rendered layouts/_messages.html.erb (69.0ms)
+Completed 200 OK in 47769ms (Views: 24845.2ms | ActiveRecord: 483.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 19:00:30 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (436.1ms)
+  Rendered layouts/_navigation_links.html.erb (35.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (101.0ms)
+  Rendered layouts/_navigation.html.erb (372.4ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 16732ms (Views: 10358.2ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 19:08:12 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (170.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (14.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (622.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (214.6ms)
+  Rendered layouts/_navigation.html.erb (432.7ms)
+  Rendered layouts/_messages.html.erb (100.1ms)
+Completed 200 OK in 58068ms (Views: 47154.5ms | ActiveRecord: 184.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-09-10 19:11:10 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (33.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (10.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (785.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (117.1ms)
+  Rendered layouts/_navigation.html.erb (509.6ms)
+  Rendered layouts/_messages.html.erb (74.3ms)
+Completed 200 OK in 16614ms (Views: 6768.2ms | ActiveRecord: 44.6ms)
+
+
+  [1m[36mUser Load (71.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (53.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-09-10 19:44:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (60.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (10.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (118.9ms)
+  Rendered layouts/_navigation_links.html.erb (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (13.1ms)
+  Rendered layouts/_navigation.html.erb (53.4ms)
+  Rendered layouts/_messages.html.erb (2.0ms)
+Completed 200 OK in 24982ms (Views: 18735.8ms | ActiveRecord: 64.0ms)
+
+
+Started GET "/taskks.xls" for 127.0.0.1 at 2018-09-10 19:45:58 +0530
+Processing by TaskksController#index as 
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (8.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (9.7ms)
+  Rendered layouts/_navigation.html.erb (23.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 4518ms (Views: 166.6ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/taskks.xls" for 127.0.0.1 at 2018-09-10 19:46:29 +0530
+Processing by TaskksController#index as 
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (14.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 2595ms (Views: 198.0ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/taskks" for 127.0.0.1 at 2018-09-10 19:48:47 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 6249ms (ActiveRecord: 655.8ms)
+
+
+  
+NoMethodError (To respond to a custom format, register it as a MIME type first: http://guides.rubyonrails.org/action_controller_overview.html#restful-downloads. If you meant to respond to a variant like :tablet or :phone, not a custom format, be sure to nest your variant response within a format response: format.html { |html| html.tablet { ... } }):
+  
+app/controllers/taskks_controller.rb:17:in `block in index'
+app/controllers/taskks_controller.rb:14:in `index'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.7ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.8ms)
+Started GET "/taskks" for 127.0.0.1 at 2018-09-10 19:50:06 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2759ms (ActiveRecord: 1.2ms)
+
+
+  
+NoMethodError (To respond to a custom format, register it as a MIME type first: http://guides.rubyonrails.org/action_controller_overview.html#restful-downloads. If you meant to respond to a variant like :tablet or :phone, not a custom format, be sure to nest your variant response within a format response: format.html { |html| html.tablet { ... } }):
+  
+app/controllers/taskks_controller.rb:17:in `block in index'
+app/controllers/taskks_controller.rb:14:in `index'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.6ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (94.4ms)
+Started GET "/taskks" for 127.0.0.1 at 2018-09-10 19:50:46 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (24.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (107.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (3.6ms)
+  Rendered layouts/_navigation.html.erb (77.1ms)
+  Rendered layouts/_messages.html.erb (2.4ms)
+Completed 200 OK in 13494ms (Views: 7346.1ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/taskks.xls" for 127.0.0.1 at 2018-09-10 19:51:12 +0530
+Processing by TaskksController#index as XLS
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 2679ms (ActiveRecord: 1.5ms)
+
+
+  
+NameError (uninitialized constant Taskk::CSV):
+  
+app/models/taskk.rb:9:in `to_csv'
+app/controllers/taskks_controller.rb:17:in `block (2 levels) in index'
+app/controllers/taskks_controller.rb:14:in `index'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.8ms)

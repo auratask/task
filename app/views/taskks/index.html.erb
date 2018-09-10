@@ -1,2 +1,76 @@
-<h1>Taskks#index</h1>
-<p>Find me in app/views/taskks/index.html.erb</p>
+<p>List of Tasks in the particular order</p>
+<p> Not Done Count: <%=Taskk.not_done_tasks(@tasks).count%></p>
+<p> Do it on Done Count: <%= Taskk.do_it_on_date_tasks(@tasks).count %> </p>
+<p class="text-success"><strong>Edit via clicking the consumer number</strong></p>
+   <p class="text-success"><strong>Not Done</strong> Tasks</p>
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Phone No</th>
+    <th>Address</th>
+    <th>Area</th>
+    <th>Flavors</th>
+    <th>MCount</th>
+    <th>Allocated</th>
+    <th>Priority</th>
+  </tr>
+ 
+  <% Taskk.not_done_tasks(@tasks).each do |task| %>
+      <tr>
+      <td><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
+      <td><%= task.customer_name %></td>
+      <td><%= task.customer_phone_number %></td>
+      <td><%= task.customer_address %></td>
+      <td><%= task.customer_area %></td>
+      <td><%= task.customer_flavors %></td>
+      <td><%= task.customer_machine_count%></td>
+      <td><%= task.allocated_to%></td>
+      <td><%= task.priority%></td>
+    </tr>
+    <% end %>
+</table>
+<br>
+<BR>
+<BR>
+<p class="text-success"><strong>Do it on Date</strong> Tasks</p>
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <th>No</th>
+    <th>Name</th>
+    <th>Phone No</th>
+    <th>Address</th>
+    <th>Area</th>
+    <th>Flavors</th>
+    <th>MCount</th>
+    <th>Allocated</th>
+    <th>Priority</th>
+  </tr>
+ 
+  <% Taskk.do_it_on_date_tasks(@tasks).each do |task| %>
+      <tr>
+      <td><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
+      <td><%= task.customer_name %></td>
+      <td><%= task.customer_phone_number %></td>
+      <td><%= task.customer_address %></td>
+      <td><%= task.customer_area %></td>
+      <td><%= task.customer_flavors %></td>
+      <td><%= task.customer_machine_count%></td>
+      <td><%= task.allocated_to%></td>
+      <td><%= task.priority%></td>
+    </tr>
+    <% end %>
+</table>
+<br>
+
+<th></th>
+
+
+<br>
+<BR>
+<BR>
+ <p>
+  Download:
+  <%= link_to "CSV", taskks_path(format: "csv"), :class => "btn btn-info" %> |
+  <%= link_to "Excel", taskks_path(format: "xls"), :class => "btn btn-info" %>
+</p>
