@@ -12,4 +12,9 @@ class User < ApplicationRecord
    data = resp.body
    @result = JSON.parse(data)
   end
+
+  def self.consumer_nos
+    User.customers.collect {|x| x["consumer_no"]}.sort
+  end
+
 end

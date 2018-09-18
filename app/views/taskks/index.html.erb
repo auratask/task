@@ -7,12 +7,11 @@
   <tr>
     <th>No</th>
     <th>Name</th>
-    <th>Phone No</th>
-    <th>Address</th>
+    <th>Allocated</th>
     <th>Area</th>
     <th>Flavors</th>
     <th>MCount</th>
-    <th>Allocated</th>
+    <th>Activity</th>
     <th>Priority</th>
   </tr>
  
@@ -20,12 +19,11 @@
       <tr>
       <td><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
       <td><%= task.customer_name %></td>
-      <td><%= task.customer_phone_number %></td>
-      <td><%= task.customer_address %></td>
+      <td><%= task.allocated_to%></td>
       <td><%= task.customer_area %></td>
       <td><%= task.customer_flavors %></td>
       <td><%= task.customer_machine_count%></td>
-      <td><%= task.allocated_to%></td>
+      <td><%= task.activity%></td>
       <td><%= task.priority%></td>
     </tr>
     <% end %>
@@ -38,12 +36,11 @@
   <tr>
     <th>No</th>
     <th>Name</th>
-    <th>Phone No</th>
-    <th>Address</th>
+    <th>Allocated</th>
     <th>Area</th>
     <th>Flavors</th>
     <th>MCount</th>
-    <th>Allocated</th>
+    <th>Activity</th>
     <th>Priority</th>
   </tr>
  
@@ -51,12 +48,11 @@
       <tr>
       <td><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
       <td><%= task.customer_name %></td>
-      <td><%= task.customer_phone_number %></td>
-      <td><%= task.customer_address %></td>
+      <td><%= task.allocated_to%></td>
       <td><%= task.customer_area %></td>
       <td><%= task.customer_flavors %></td>
       <td><%= task.customer_machine_count%></td>
-      <td><%= task.allocated_to%></td>
+      <td><%= task.activity%></td>
       <td><%= task.priority%></td>
     </tr>
     <% end %>

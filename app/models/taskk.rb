@@ -1,4 +1,10 @@
 class Taskk < ApplicationRecord
+	belongs_to :task_list , optional: true
+	has_many :activities,  inverse_of: :taskk
+	accepts_nested_attributes_for :activities
+
+
+require 'csv'
 after_create_commit :set_customer_details
 
 @@customers = User.customers
@@ -6,10 +12,10 @@ after_create_commit :set_customer_details
 
 def self.to_csv(options = {})
 		desired_columns = ["Sr no","Consumer no", "Task Date", "Party Name","Allocation","status", "Activity", "Priority"]
-		CSV.generate(options) do | csv |
-			csv << desired_columns
+		CSV.generate(options) do | xls |
+			xls << desired_columns
 			all.each do |m|
-				csv << ["#{m.id}","#{m.task_consumer_number}", "#{m.created_at.strftime("%d-%m-%y")}", "#{m.customer_name}","#{m.allocated_to}","#{m.status}", "#{m.activity}", "#{m.priority}"]
+				xls << ["#{m.id}","#{m.task_consumer_no}", "#{m.created_at.strftime("%d-%m-%y")}", "#{m.customer_name}","#{m.allocated_to}","#{m.status}", "#{m.activity}", "#{m.priority}"]
 			end
 		end
 	end

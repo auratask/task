@@ -1,0 +1,50 @@
+
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+<th>Date</th>
+<th>AllocatedTo</th>
+<th>Expense</th>
+</tr>
+<%= form_for @task_list do |f| %>
+<tr>
+	<td class: "width-form-fix-date" ><%= f.datetime_field :task_list_date %></td>
+      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Giakwad", "Jitesh Bagul", "Sandesh Jadhav", "Emp1", "Emp2"] )%></td>
+      <td><%= f.text_field :expense %></td>	
+</tr>
+<br>
+<br>
+<br/>
+<table border="3" cellpadding="7" cellspacing="5">
+  <tr>
+  	<th>Task no</th>
+    <th>Consumer No</th>
+    <th>Instructions</th>
+    <th>Priority</th>
+    <th>Status</th>
+    <th>Activity</th>
+  </tr>
+    <tr>
+    	<%["1","2","3","4","5","6","7","8","9","10","11","12"].each do |x| %>
+    	
+    	<td><%= x%> </td>
+      <%= f.fields_for :taskks do |task| %>
+	      <td><%= task.select(:task_consumer_no,@consumer_nos) %></td>
+	      <td><%= task.text_field :instruction %></td>
+	      <td><%= task.select(:priority,["Urgent", "Imp", "High", "Normal"]) %></td>
+	      <td><%= task.select(:status,[ "Not Done","Done", "Do it on Date"]) %></td>
+	      <%= task.fields_for :activities do |activity| %>
+	      <td><%= activity.select(:name,["Refill", "Machine Issue", "Fragrance Issue", "Payment collection", "Demo", "P.Demo", "Bill Change", "CellChange", "Installation", "FShow","Other" ]) %></td>
+	      
+    </tr>
+    <% end %>
+   <% end %> 	
+  <% end %>
+</table>
+<%= f.submit %>
+<%end%>
+<br>
+
+<br>
+
+<br>
+
