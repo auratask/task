@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable,  :validatable
 
-  def self.customers
+  def customers
    @user = User.first
    require 'net/http'
    api_source ="https://aura-system.herokuapp.com/api/customers?api_token=qA88bHyQ1ydBxhxNsEyK"
@@ -15,7 +15,7 @@ class User < ApplicationRecord
   end
 
   def self.consumer_nos
-    User.customers.collect {|x| x["consumer_no"]}.sort
+    User.first.customers.collect {|x| x["consumer_no"]}.sort
   end
 
 end

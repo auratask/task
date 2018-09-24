@@ -8,7 +8,7 @@ class Taskk < ApplicationRecord
 require 'csv'
 after_create_commit :set_customer_details, :set_task_parameters
 
-@@customers = User.customers
+@@customers = User.first.customers
 
 
 def self.to_csv(options = {})
