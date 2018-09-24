@@ -31,7 +31,7 @@ class TaskListsController < ApplicationController
   end
 
   def edit
-    @consumer_nos = User.first.consumer_nos
+    @consumer_nos = User.consumer_nos
     @task_list =TaskList.find(params[:id])
   end
 
