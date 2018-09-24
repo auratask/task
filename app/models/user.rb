@@ -14,7 +14,7 @@ class User < ApplicationRecord
   end
 
   def self.consumer_nos
-    User.first.customers.collect {|x| x["consumer_no"]}.sort
+    User.customers.collect {|x| x["consumer_no"]}.sort
   end
 
 end
