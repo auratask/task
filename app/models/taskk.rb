@@ -8,7 +8,7 @@ class Taskk < ApplicationRecord
 require 'csv'
 after_create_commit :set_customer_details, :set_task_parameters
 
-@@customers = User.first.customers
+#@@customers = User.first.customers
 
 
 def self.to_csv(options = {})
@@ -63,7 +63,7 @@ end
 def set_customer_details
 	@task = Taskk.find(self.id)
 	@customer=[]
-	@@customers.each do |x|
+	User.first.customers.each do |x|
 		if x["consumer_no"] == @task.task_consumer_no
 			@customer=x
 		end
