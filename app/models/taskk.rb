@@ -2,10 +2,11 @@ class Taskk < ApplicationRecord
 	belongs_to :task_list , optional: true
 	has_many :activities,  inverse_of: :taskk
 	accepts_nested_attributes_for :activities
+	validates :task_consumer_no, presence: true
 
 
 require 'csv'
-after_create_commit :set_customer_details
+after_create_commit :set_customer_details, :set_task_parameters
 
 @@customers = User.customers
 
@@ -73,8 +74,15 @@ def set_customer_details
     @task.customer_area = @customer["area"]
     @task.customer_flavors = @customer["flavors"]
     @task.customer_machine_count = @customer["machine_count"]
+    @xy =TaskList.find(@task.task_list_id)
+	@task.allocated_to = @xy.allocated_to
+	@task.activity = Activity.where(:taskk_id => self.id).first.name
     @task.save
 end
 
+def set_task_parameters
+	@task = Taskk.find(self.id)
+	
+end
 
 end

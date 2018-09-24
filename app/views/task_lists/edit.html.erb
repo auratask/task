@@ -1,2 +1,63 @@
-<h1>TaskLists#edit</h1>
-<p>Find me in app/views/task_lists/edit.html.erb</p>
+<p>Edit Task list </p>
+
+
+<h3>Edit Task List Details  Here</h3>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">Edit Task List</div>
+    <div class="panel-body">
+		<div class="container">
+		
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+<th>Date</th>
+<th>AllocatedTo</th>
+<th>Expense</th>
+</tr>
+<%= form_for @task_list do |f| %>
+<tr>
+	<td class: "width-form-fix-date" ><%= f.date_field :task_list_date, "data-provide" => 'datepicker'%></td>
+      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Emp1", "Emp2"], :include_blank => true )%></td>
+      <td><%= f.text_field :expense %></td>	
+</tr>
+<br>
+<br>
+<br/>
+<table border="3" cellpadding="7" cellspacing="5">
+  <tr>
+  	<th>Task no</th>
+    <th>Consumer No</th>
+    <th>Instructions</th>
+    <th>Priority</th>
+    <th>Status</th>
+    <th>Activity</th>
+  </tr>
+    <tr>
+    	<% x=1 %>
+    	<%= f.fields_for :taskks do |task| %>
+    	  <td><%= x%> </td>
+          <td><%= task.select(:task_consumer_no,@consumer_nos, :include_blank => true) %></td>
+	      <td><%= task.text_field :instruction %></td>
+	      <td><%= task.select(:priority,["Urgent", "Imp", "High", "Normal"]) %></td>
+	      <td><%= task.select(:status,[ "Not Done","Done", "Do it on Date"]) %></td>
+	      <%= task.fields_for :activities do |activity| %>
+	      <td><%= activity.select(:name,["Refill", "Machine Issue", "Fragrance Issue", "Payment collection", "Demo", "P.Demo", "Bill Change", "CellChange", "Installation", "FShow","Other" ], :include_blank => true) %></td>
+	      <td><% x=x+1 %></td>
+	      
+    </tr>
+    
+   <% end %> 	
+  <% end %>
+</table>
+<%= f.submit %>
+<%end%>
+<br>
+
+<br>
+
+<br>
+
+</div>
+	</div>
+ </div>
+<BR>

@@ -1,2 +1,36 @@
-<h1>TaskLists#show</h1>
-<p>Find me in app/views/task_lists/show.html.erb</p>
+<h1>Listing all the tasks in Task List</h1> 
+<h3> <%= link_to "Edit Task List", edit_task_list_path(@task_list)%></h3>
+<p> Refill Count: <%= @task_list.taskks.collect {|x| x.customer_machine_count}.sum %></p>
+<p> Tasks Count: <%= @task_list.taskks.count %> </p>
+<p>This task is allocated to <b><%=@task_list.allocated_to%></b></p>
+   <p class="text-success"><strong>Edit</strong> via clicking the Consumer Number</p>
+<table border="1" cellpadding="5" cellspacing="5">
+  <tr>
+    <th>Consumer No</th>
+    <th>Name</th>
+    <th>Phone Number</th>
+    <th>Address</th>
+    <th>Area</th>
+    <th>Flavors</th>
+    <th>Machine Count</th>
+    <th>Activity</th>
+    <th>Instruction</th>
+    <th>Priority</th>
+  </tr>
+ 
+  <% @task_list.taskks.each do |task| %>
+    <tr>
+      <td height="100"><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
+      <td height="100"><%= task.customer_name %></td>
+      <td height="100"><%= task.customer_phone_number %></td>
+      <td height="100"><%= task.customer_address %></td>
+      <td height="100"><%= task.customer_area %></td>
+      <td height="100"><%= task.customer_flavors %></td>
+      <td height="100"><%= task.customer_machine_count%></td>
+      <td height="100"><%= task.activity%></td>
+      <td height="100"><%= task.instruction%></td>
+      <td height="100"><%= task.priority%></td>
+    </tr>
+  <% end %>
+</table>
+<br>
