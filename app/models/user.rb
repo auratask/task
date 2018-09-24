@@ -7,6 +7,7 @@ class User < ApplicationRecord
   def self.customers
    @user = User.first
    require 'net/http'
+   api_source ="https://aura-system.herokuapp.com/api/customers?api_token=qA88bHyQ1ydBxhxNsEyK"
    source = @user.api_source
    resp = Net::HTTP.get_response(URI.parse(source))
    data = resp.body
