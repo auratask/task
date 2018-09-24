@@ -63,7 +63,7 @@ end
 def set_customer_details
 	@task = Taskk.find(self.id)
 	@customer=[]
-	User.first.customers.each do |x|
+	User.customers.each do |x|
 		if x["consumer_no"] == @task.task_consumer_no
 			@customer=x
 		end
