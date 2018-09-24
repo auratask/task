@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable,  :validatable
 
-  def customers
+  def self.customers
    @user = User.first
    require 'net/http'
    source = @user.api_source
