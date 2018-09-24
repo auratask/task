@@ -7,5 +7,5 @@ Rails.application.routes.draw do
   resources :users
   resources :task_lists
   resources :taskks
-  root to: 'users#index'
+  root to: 'taskks#index'
 end

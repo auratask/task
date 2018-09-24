@@ -7141,3 +7141,29 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 17191ms (Views: 10180.0ms | ActiveRecord: 2520.0ms)
 
 
+Started GET "/task_lists" for 127.0.0.1 at 2018-09-24 17:02:15 +0530
+Started GET "/task_lists" for 127.0.0.1 at 2018-09-24 17:03:09 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (490.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (498.9ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (3210.5ms)
+  Rendered layouts/_navigation_links.html.erb (81.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (1057.3ms)
+  Rendered layouts/_messages.html.erb (15.5ms)
+Completed 200 OK in 18631ms (Views: 12706.9ms | ActiveRecord: 2215.3ms)
+
+
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (192.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.6ms)
+  Rendered layouts/_navigation.html.erb (108.6ms)
+  Rendered layouts/_messages.html.erb (0.2ms)
+Completed 200 OK in 20007ms (Views: 16775.6ms | ActiveRecord: 1.2ms)
+
+

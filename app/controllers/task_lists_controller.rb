@@ -15,7 +15,7 @@ class TaskListsController < ApplicationController
   
 
   def new
-  	@consumer_nos = User.first.consumer_nos
+  	@consumer_nos = User.consumer_nos
   	@x=0
   	@task_list = TaskList.new
     @task_list.taskks.build.activities.build
