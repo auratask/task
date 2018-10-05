@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180912131814) do
+ActiveRecord::Schema.define(version: 20180930161447) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,12 +22,20 @@ ActiveRecord::Schema.define(version: 20180912131814) do
     t.integer  "taskk_id"
   end
 
+  create_table "task_consumer_nos", force: :cascade do |t|
+    t.integer  "task_consumer_no_id"
+    t.integer  "activity_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
   create_table "task_lists", force: :cascade do |t|
     t.integer  "expense"
     t.string   "allocated_to"
     t.datetime "task_list_date"
-    t.datetime "created_at",     null: false
-    t.datetime "updated_at",     null: false
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "expense_utilized"
   end
 
   create_table "taskks", force: :cascade do |t|
@@ -47,6 +55,8 @@ ActiveRecord::Schema.define(version: 20180912131814) do
     t.string   "customer_flavors"
     t.integer  "customer_machine_count"
     t.integer  "task_list_id"
+    t.string   "remark"
+    t.integer  "task_consumer_no_id"
   end
 
   create_table "users", force: :cascade do |t|

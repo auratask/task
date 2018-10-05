@@ -7167,3 +7167,1125 @@ Processing by TaskListsController#index as HTML
 Completed 200 OK in 20007ms (Views: 16775.6ms | ActiveRecord: 1.2ms)
 
 
+  [1m[36mTaskList Load (729.8ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" ORDER BY "task_lists"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4638495710780385720);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (33.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddExpenseUtilizedToTaskList (20180930153040)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (208.2ms)[0m  [1m[35mALTER TABLE "task_lists" ADD "expense_utilized" integer[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180930153040"]]
+  [1m[35m (72.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (48.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(4638495710780385720)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4638495710780385720);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddRemarkToTaskk (20180930153703)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (68.4ms)[0m  [1m[35mALTER TABLE "taskks" ADD "remark" character varying[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180930153703"]]
+  [1m[35m (17.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.9ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4638495710780385720)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-30 21:08:55 +0530
+Started GET "/" for 127.0.0.1 at 2018-09-30 21:08:55 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (2.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskksController#index as HTML
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (63.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (63.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (31.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (38.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (280.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (3.0ms)
+  Rendered layouts/_navigation.html.erb (35.9ms)
+  Rendered layouts/_messages.html.erb (1.8ms)
+Completed 200 OK in 32868ms (Views: 3912.6ms | ActiveRecord: 112.8ms)
+
+
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (21.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 38191ms (Views: 166.2ms | ActiveRecord: 103.6ms)
+
+
+  [1m[36mTaskk Load (42.1ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4638495710780385720);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (46.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateTaskConsumerNos (20180930160308)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (397.5ms)[0m  [1m[35mCREATE TABLE "task_consumer_nos" ("id" serial primary key, "task_consumer_no_id" integer, "activity_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180930160308"]]
+  [1m[35m (73.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (26.6ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4638495710780385720)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mTaskConsumerNo Load (26.9ms)[0m  [1m[34mSELECT  "task_consumer_nos".* FROM "task_consumer_nos" ORDER BY "task_consumer_nos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4638495710780385720);[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTaskConsumerNoIdToTaskk (20180930161447)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.2ms)[0m  [1m[35mALTER TABLE "taskks" ADD "task_consumer_no_id" integer[0m
+  [1m[35mSQL (18.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20180930161447"]]
+  [1m[35m (47.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4638495710780385720)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-30 21:48:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (20.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for 127.0.0.1 at 2018-09-30 21:48:52 +0530
+Processing by TaskksController#index as HTML
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (505.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (504.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (110.7ms)
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (16.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (133.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.4ms)
+  Rendered layouts/_navigation.html.erb (132.7ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 29083ms (Views: 6923.5ms | ActiveRecord: 552.9ms)
+
+
+Completed 200 OK in 29045ms (Views: 6264.6ms | ActiveRecord: 513.3ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-09-30 21:49:31 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (165.7ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (189.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 451ms (Views: 127.2ms | ActiveRecord: 171.7ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-09-30 21:49:35 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (862.8ms)
+  Rendered task_lists/new.html.erb within layouts/application (913.9ms)
+  Rendered layouts/_navigation_links.html.erb (2.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (6.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 6801ms (Views: 1021.8ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-09-30 21:51:11 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (132.3ms)
+  Rendered task_lists/new.html.erb within layouts/application (134.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 4949ms (Views: 229.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/task_lists" for 127.0.0.1 at 2018-09-30 21:52:26 +0530
+Processing by TaskListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NGsDdc1G9bfJXmSJN1ZbLBvzpJF4jMLZ8G7sZwJODy5rI/Ntam61RNL6OvnjTi4P9scGq9ktd2RM+sg3zvR6iQ==", "task_list"=>{"task_list_date"=>"2018-09-30", "allocated_to"=>"Rohit Katkar", "expense"=>"23", "taskks_attributes"=>{"0"=>{"task_consumer_no"=>"116", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Refill"}}}, "1"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Fragrance Issue"}}}, "2"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Refill"}}}, "3"=>{"task_consumer_no"=>"117", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Refill"}}}, "4"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"P.Demo"}}}, "5"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "6"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "7"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "8"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "9"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "10"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "11"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}}}, "commit"=>"Create Task list"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (296.6ms)[0m  [1m[32mINSERT INTO "task_lists" ("expense", "allocated_to", "task_list_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["expense", 23], ["allocated_to", "Rohit Katkar"], ["task_list_date", "2018-09-30 00:00:00"], ["created_at", "2018-09-30 16:22:26.336386"], ["updated_at", "2018-09-30 16:22:26.336386"]]
+  [1m[35mSQL (103.2ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "116"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:22:26.686260"], ["updated_at", "2018-09-30 16:22:26.686260"], ["task_list_id", 13]]
+  [1m[35mSQL (59.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Refill"], ["created_at", "2018-09-30 16:22:26.791533"], ["updated_at", "2018-09-30 16:22:26.791533"], ["taskk_id", 61]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:22:26.852889"], ["updated_at", "2018-09-30 16:22:26.852889"], ["task_list_id", 13]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fragrance Issue"], ["created_at", "2018-09-30 16:22:26.855290"], ["updated_at", "2018-09-30 16:22:26.855290"], ["taskk_id", 62]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:22:26.857570"], ["updated_at", "2018-09-30 16:22:26.857570"], ["task_list_id", 13]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Refill"], ["created_at", "2018-09-30 16:22:26.859879"], ["updated_at", "2018-09-30 16:22:26.859879"], ["taskk_id", 63]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "117"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:22:26.862155"], ["updated_at", "2018-09-30 16:22:26.862155"], ["task_list_id", 13]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Refill"], ["created_at", "2018-09-30 16:22:26.866661"], ["updated_at", "2018-09-30 16:22:26.866661"], ["taskk_id", 64]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:22:26.869997"], ["updated_at", "2018-09-30 16:22:26.869997"], ["task_list_id", 13]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "P.Demo"], ["created_at", "2018-09-30 16:22:26.872639"], ["updated_at", "2018-09-30 16:22:26.872639"], ["taskk_id", 65]]
+  [1m[35m (107.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 61], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 61], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "updated_at" = $9 WHERE "taskks"."id" = $10[0m  [["customer_name", "Reliance Home Finance Ltd"], ["customer_phone_number", "9819123801"], ["customer_address", "Reliance Centre, 6th floor, South Wing, Off. W E Highway, Santacruz East - 400055"], ["customer_area", "Dadar West"], ["customer_flavors", "4lavendar 1ratrani 2mogra"], ["customer_machine_count", 9], ["allocated_to", "Rohit Katkar"], ["activity", "Refill"], ["updated_at", "2018-09-30 16:22:31.769030"], ["id", 61]]
+  [1m[35m (19.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 62], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.8ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 62], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "updated_at" = $9 WHERE "taskks"."id" = $10[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["allocated_to", "Rohit Katkar"], ["activity", "Fragrance Issue"], ["updated_at", "2018-09-30 16:22:35.482381"], ["id", 62]]
+  [1m[35m (19.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 63], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 63], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "updated_at" = $9 WHERE "taskks"."id" = $10[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["allocated_to", "Rohit Katkar"], ["activity", "Refill"], ["updated_at", "2018-09-30 16:22:40.116302"], ["id", 63]]
+  [1m[35m (26.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 64], ["LIMIT", 1]]
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 64], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "updated_at" = $9 WHERE "taskks"."id" = $10[0m  [["customer_name", "Resources Global Professionals Pvt Ltd"], ["customer_phone_number", "022 67400700"], ["customer_address", "1, Bradys Gladys Plaza, 1st floor, 1/447 Senapati Bapat Marg, Lower Parel Mumbai 400 013"], ["customer_area", "Lower Parel"], ["customer_flavors", "1-Mogra  1- lemongrass1 - Sensual"], ["customer_machine_count", 3], ["allocated_to", "Rohit Katkar"], ["activity", "Refill"], ["updated_at", "2018-09-30 16:22:44.637591"], ["id", 64]]
+  [1m[35m (25.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 65], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 65], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "updated_at" = $9 WHERE "taskks"."id" = $10[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["allocated_to", "Rohit Katkar"], ["activity", "P.Demo"], ["updated_at", "2018-09-30 16:22:51.828910"], ["id", 65]]
+  [1m[35m (28.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/task_lists/13
+Completed 302 Found in 25555ms (ActiveRecord: 712.0ms)
+
+
+Started GET "/task_lists/13" for 127.0.0.1 at 2018-09-30 21:52:51 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.3ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 13]]
+  [1m[35m (22.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 13]]
+  Rendered task_lists/show.html.erb within layouts/application (32.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (5.4ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 232ms (Views: 192.8ms | ActiveRecord: 24.1ms)
+
+
+  [1m[36mTaskConsumerNo Load (0.4ms)[0m  [1m[34mSELECT  "task_consumer_nos".* FROM "task_consumer_nos" ORDER BY "task_consumer_nos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskConsumerNo Load (0.7ms)[0m  [1m[34mSELECT "task_consumer_nos".* FROM "task_consumer_nos"[0m
+  [1m[36mTaskConsumerNo Load (0.7ms)[0m  [1m[34mSELECT  "task_consumer_nos".* FROM "task_consumer_nos" ORDER BY "task_consumer_nos"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (289.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (15.2ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/task_lists" for 127.0.0.1 at 2018-09-30 21:59:43 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (0.7ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (25.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (22.1ms)
+  Rendered layouts/_messages.html.erb (63.9ms)
+Completed 200 OK in 593ms (Views: 419.6ms | ActiveRecord: 11.7ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-09-30 21:59:50 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (189.5ms)
+  Rendered task_lists/new.html.erb within layouts/application (217.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (45.5ms)
+  Rendered layouts/_navigation.html.erb (50.1ms)
+  Rendered layouts/_messages.html.erb (12.8ms)
+Completed 200 OK in 7359ms (Views: 395.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-09-30 22:00:30 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (164.5ms)
+  Rendered task_lists/new.html.erb within layouts/application (166.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 4823ms (Views: 291.7ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/task_lists" for 127.0.0.1 at 2018-09-30 22:01:18 +0530
+Processing by TaskListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2l9CheIpoOBVzUle0Zjii5rsRE6yDkX+N76o/UrR+C+FF7KdRQHgE05pFy4FgJeod9jmdBOv8EOLKoythmuNiA==", "task_list"=>{"task_list_date"=>"2018-09-30", "allocated_to"=>"Swapnil Gite", "expense"=>"34", "taskks_attributes"=>{"0"=>{"task_consumer_no"=>"116", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Refill"}}}, "1"=>{"task_consumer_no"=>"116", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Machine Issue"}}}, "2"=>{"task_consumer_no"=>"116", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Fragrance Issue"}}}, "3"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "4"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "5"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "6"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "7"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "8"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "9"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "10"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "11"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}}}, "commit"=>"Create Task list"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (23.8ms)[0m  [1m[32mINSERT INTO "task_lists" ("expense", "allocated_to", "task_list_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["expense", 34], ["allocated_to", "Swapnil Gite"], ["task_list_date", "2018-09-30 00:00:00"], ["created_at", "2018-09-30 16:31:19.026582"], ["updated_at", "2018-09-30 16:31:19.026582"]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "116"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:31:19.052872"], ["updated_at", "2018-09-30 16:31:19.052872"], ["task_list_id", 14]]
+  [1m[35mSQL (9.3ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Refill"], ["created_at", "2018-09-30 16:31:19.056510"], ["updated_at", "2018-09-30 16:31:19.056510"], ["taskk_id", 66]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "116"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:31:19.068616"], ["updated_at", "2018-09-30 16:31:19.068616"], ["task_list_id", 14]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Machine Issue"], ["created_at", "2018-09-30 16:31:19.073206"], ["updated_at", "2018-09-30 16:31:19.073206"], ["taskk_id", 67]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "116"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:31:19.076368"], ["updated_at", "2018-09-30 16:31:19.076368"], ["task_list_id", 14]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fragrance Issue"], ["created_at", "2018-09-30 16:31:19.078977"], ["updated_at", "2018-09-30 16:31:19.078977"], ["taskk_id", 68]]
+  [1m[35m (12.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 66], ["LIMIT", 1]]
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 66], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "task_consumer_no_id" = $9, "updated_at" = $10 WHERE "taskks"."id" = $11[0m  [["customer_name", "Reliance Home Finance Ltd"], ["customer_phone_number", "9819123801"], ["customer_address", "Reliance Centre, 6th floor, South Wing, Off. W E Highway, Santacruz East - 400055"], ["customer_area", "Dadar West"], ["customer_flavors", "4lavendar 1ratrani 2mogra"], ["customer_machine_count", 9], ["allocated_to", "Swapnil Gite"], ["activity", "Refill"], ["task_consumer_no_id", 66], ["updated_at", "2018-09-30 16:31:23.676683"], ["id", 66]]
+  [1m[35m (14.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 67], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 67], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "task_consumer_no_id" = $9, "updated_at" = $10 WHERE "taskks"."id" = $11[0m  [["customer_name", "Reliance Home Finance Ltd"], ["customer_phone_number", "9819123801"], ["customer_address", "Reliance Centre, 6th floor, South Wing, Off. W E Highway, Santacruz East - 400055"], ["customer_area", "Dadar West"], ["customer_flavors", "4lavendar 1ratrani 2mogra"], ["customer_machine_count", 9], ["allocated_to", "Swapnil Gite"], ["activity", "Machine Issue"], ["task_consumer_no_id", 67], ["updated_at", "2018-09-30 16:31:32.895866"], ["id", 67]]
+  [1m[35m (27.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 68], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 68], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "task_consumer_no_id" = $9, "updated_at" = $10 WHERE "taskks"."id" = $11[0m  [["customer_name", "Reliance Home Finance Ltd"], ["customer_phone_number", "9819123801"], ["customer_address", "Reliance Centre, 6th floor, South Wing, Off. W E Highway, Santacruz East - 400055"], ["customer_area", "Dadar West"], ["customer_flavors", "4lavendar 1ratrani 2mogra"], ["customer_machine_count", 9], ["allocated_to", "Swapnil Gite"], ["activity", "Fragrance Issue"], ["task_consumer_no_id", 68], ["updated_at", "2018-09-30 16:31:37.318028"], ["id", 68]]
+  [1m[35m (10.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/task_lists/14
+Completed 302 Found in 18389ms (ActiveRecord: 113.1ms)
+
+
+Started GET "/task_lists/14" for 127.0.0.1 at 2018-09-30 22:01:37 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 14]]
+  Rendered task_lists/show.html.erb within layouts/application (8.9ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (13.5ms)
+  Rendered layouts/_navigation.html.erb (17.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 191ms (Views: 156.3ms | ActiveRecord: 2.7ms)
+
+
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskConsumerNo Load (0.7ms)[0m  [1m[34mSELECT "task_consumer_nos".* FROM "task_consumer_nos"[0m
+  [1m[36mActivity Load (49.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities"[0m
+  [1m[35m (49.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "activities"[0m
+  [1m[36mTaskConsumerNo Load (0.4ms)[0m  [1m[34mSELECT "task_consumer_nos".* FROM "task_consumer_nos"[0m
+Started GET "/task_lists" for 127.0.0.1 at 2018-09-30 22:09:57 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (26.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (1.4ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (59.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (111.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 5423ms (Views: 5253.7ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-09-30 22:10:11 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (17.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (356.2ms)
+  Rendered task_lists/new.html.erb within layouts/application (373.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 5188ms (Views: 486.6ms | ActiveRecord: 27.2ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-09-30 22:12:34 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (137.6ms)
+  Rendered task_lists/new.html.erb within layouts/application (139.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 4320ms (Views: 247.9ms | ActiveRecord: 3.9ms)
+
+
+Started POST "/task_lists" for 127.0.0.1 at 2018-09-30 22:13:10 +0530
+Processing by TaskListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sVnx01asRk1/kzL1F3vpTn7N9K47t2WA5Z70bf/bKJzuEQHL8YQGvmQ3bIXDY5xtk/lWlJoW0D1ZCtA9M2FdOw==", "task_list"=>{"task_list_date"=>"2018-09-30", "allocated_to"=>"Swapnil Gite", "expense"=>"33", "taskks_attributes"=>{"0"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Refill"}}}, "1"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Fragrance Issue"}}}, "2"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Payment collection"}}}, "3"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "4"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "5"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "6"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "7"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "8"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "9"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "10"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "11"=>{"task_consumer_no"=>"", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}}}, "commit"=>"Create Task list"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (223.3ms)[0m  [1m[32mINSERT INTO "task_lists" ("expense", "allocated_to", "task_list_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["expense", 33], ["allocated_to", "Swapnil Gite"], ["task_list_date", "2018-09-30 00:00:00"], ["created_at", "2018-09-30 16:43:10.685904"], ["updated_at", "2018-09-30 16:43:10.685904"]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:43:10.912055"], ["updated_at", "2018-09-30 16:43:10.912055"], ["task_list_id", 15]]
+  [1m[35mSQL (56.9ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Refill"], ["created_at", "2018-09-30 16:43:10.914678"], ["updated_at", "2018-09-30 16:43:10.914678"], ["taskk_id", 69]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:43:10.973514"], ["updated_at", "2018-09-30 16:43:10.973514"], ["task_list_id", 15]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Fragrance Issue"], ["created_at", "2018-09-30 16:43:10.975895"], ["updated_at", "2018-09-30 16:43:10.975895"], ["taskk_id", 70]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Urgent"], ["created_at", "2018-09-30 16:43:10.978209"], ["updated_at", "2018-09-30 16:43:10.978209"], ["task_list_id", 15]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Payment collection"], ["created_at", "2018-09-30 16:43:10.980450"], ["updated_at", "2018-09-30 16:43:10.980450"], ["taskk_id", 71]]
+  [1m[35m (105.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 69], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 69], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "task_consumer_no_id" = $9, "updated_at" = $10 WHERE "taskks"."id" = $11[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["allocated_to", "Swapnil Gite"], ["activity", "Refill"], ["task_consumer_no_id", 69], ["updated_at", "2018-09-30 16:43:16.674313"], ["id", 69]]
+  [1m[35m (55.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 70], ["LIMIT", 1]]
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 70], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.8ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "task_consumer_no_id" = $9, "updated_at" = $10 WHERE "taskks"."id" = $11[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["allocated_to", "Swapnil Gite"], ["activity", "Fragrance Issue"], ["task_consumer_no_id", 70], ["updated_at", "2018-09-30 16:43:20.870132"], ["id", 70]]
+  [1m[35m (20.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 71], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (1.9ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 71], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "customer_phone_number" = $2, "customer_address" = $3, "customer_area" = $4, "customer_flavors" = $5, "customer_machine_count" = $6, "allocated_to" = $7, "activity" = $8, "task_consumer_no_id" = $9, "updated_at" = $10 WHERE "taskks"."id" = $11[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["allocated_to", "Swapnil Gite"], ["activity", "Payment collection"], ["task_consumer_no_id", 71], ["updated_at", "2018-09-30 16:43:25.659649"], ["id", 71]]
+  [1m[35m (52.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/task_lists/15
+Completed 302 Found in 15050ms (ActiveRecord: 552.9ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-09-30 22:13:25 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 122ms (Views: 109.5ms | ActiveRecord: 2.5ms)
+
+
+  [1m[36mTaskConsumerNo Load (0.4ms)[0m  [1m[34mSELECT "task_consumer_nos".* FROM "task_consumer_nos"[0m
+  [1m[36mTaskk Load (26.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:37:04 +0530
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:37:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (21.9ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (23.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TaskksController#index as HTML
+Processing by TaskksController#index as HTML
+Completed 401 Unauthorized in 423ms (ActiveRecord: 0.0ms)
+
+
+Completed 401 Unauthorized in 416ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 16:37:13 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (297.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (67.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 6705ms (Views: 6334.2ms | ActiveRecord: 190.9ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-05 16:37:35 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XhxxI9LCIzqMfstnMlVaZrcHf/tBKRmQL3zLAv60lHImhP2BjrrZGkhN3BBTCck4m0gRf1nR49/HGVyvT7ZB1Q==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (105.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vijay@aura.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 631ms (ActiveRecord: 105.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:37:36 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (76.3ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (139.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 20947ms (Views: 161.7ms | ActiveRecord: 82.4ms)
+
+
+Started GET "/taskks/9/edit" for 127.0.0.1 at 2018-10-05 16:38:43 +0530
+Processing by TaskksController#edit as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering taskks/edit.html.erb within layouts/application
+  Rendered taskks/edit.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 133ms (Views: 111.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:38:58 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.7ms)
+
+
+  
+SocketError (Failed to open TCP connection to aura-system.herokuapp.com:443 (getaddrinfo: Temporary failure in name resolution)):
+  
+app/models/user.rb:11:in `customers'
+app/controllers/taskks_controller.rb:13:in `index'
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.9ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.3.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (445.2ms)
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:39:06 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (1.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (19.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 3088ms (Views: 118.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-05 16:39:12 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (25.1ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (44.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 203ms (Views: 109.1ms | ActiveRecord: 29.3ms)
+
+
+Started GET "/task_lists/15/edit" for 127.0.0.1 at 2018-10-05 16:39:44 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.7ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[36mActivity Load (30.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 69]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 70]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 71]]
+  Rendered task_lists/edit.html.erb within layouts/application (215.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 3733ms (Views: 278.8ms | ActiveRecord: 42.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:56:00 +0530
+Processing by TaskksController#index as HTML
+Completed 401 Unauthorized in 117ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2018-10-05 16:56:01 +0530
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (96.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (100.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 2065ms (Views: 2062.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-05 16:56:49 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+82vNuG4p5QRFFs0iHwPy+TB2MwGAsMxX9YQNYJe6IHW0zKPgo9QkMva+AUqbxbNtYBQParZeMRm9Tao285UuA==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (15.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vijay@aura.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 253ms (ActiveRecord: 15.1ms)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+82vNuG4p5QRFFs0iHwPy+TB2MwGAsMxX9YQNYJe6IHW0zKPgo9QkMva+AUqbxbNtYBQParZeMRm9Tao285UuA==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/sessions/new.html.erb within layouts/application (3.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 1278ms (Views: 102.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2018-10-05 16:56:57 +0530
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GUfCcdtR89ZCoOoJoa1woWFEYnZPXrfhT3/lqc1oaEg0WV/IuGYE0phuSTgDvmmnMAXqh+OFDBR2XMM0lPjUcQ==", "user"=>{"email"=>"vijay@aura.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vijay@aura.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 247ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:56:57 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (2.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (21.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 3836ms (Views: 121.0ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-05 16:57:32 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (0.7ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (6.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 142ms (Views: 108.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/task_lists/15/edit" for 127.0.0.1 at 2018-10-05 16:57:35 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (1.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 69]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 70]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 71]]
+  Rendered task_lists/edit.html.erb within layouts/application (68.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 3391ms (Views: 209.3ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-05 16:59:15 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (2.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendered taskks/index.html.erb within layouts/application (25.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 3268ms (Views: 147.2ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/taskks.csv" for 127.0.0.1 at 2018-10-05 16:59:23 +0530
+Processing by TaskksController#index as CSV
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.4ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks"[0m
+  Rendering text template
+  Rendered text template (0.0ms)
+Sent data  (755.5ms)
+Completed 200 OK in 4381ms (Views: 755.1ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-05 17:01:12 +0530
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-05 17:01:12 +0530
+Processing by TaskListsController#index as HTML
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (24.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (65.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (1.1ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  [1m[36mTaskList Load (3.5ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (140.5ms)
+  Rendered task_lists/index.html.erb within layouts/application (132.4ms)
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-10-05 17:01:14 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (4.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.0ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (27.2ms)
+  Rendered layouts/_navigation.html.erb (56.3ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (0.3ms)
+  Rendered layouts/_navigation.html.erb (62.2ms)
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 2114ms (Views: 1941.3ms | ActiveRecord: 28.4ms)
+
+
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 2269ms (Views: 2032.3ms | ActiveRecord: 67.0ms)
+
+
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (494.2ms)
+  Rendered task_lists/new.html.erb within layouts/application (655.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (17.5ms)
+  Rendered layouts/_navigation.html.erb (48.2ms)
+  Rendered layouts/_messages.html.erb (24.2ms)
+Completed 200 OK in 5413ms (Views: 1357.9ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-05 17:09:07 +0530
+Started GET "/task_lists/15/edit" for 127.0.0.1 at 2018-10-05 17:09:09 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"15"}
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (424.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (570.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (317.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (0.8ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists"[0m
+  Rendered task_lists/index.html.erb within layouts/application (2218.6ms)
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mTaskk Load (253.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[36mActivity Load (223.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 69]]
+  [1m[36mActivity Load (40.2ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 70]]
+  [1m[36mActivity Load (56.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 71]]
+  Rendered task_lists/edit.html.erb within layouts/application (4999.6ms)
+  Rendered layouts/_navigation_links.html.erb (23.8ms)
+  Rendered layouts/_navigation_links.html.erb (12.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (72.7ms)
+  Rendered layouts/_navigation.html.erb (430.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (2.1ms)
+  Rendered layouts/_navigation.html.erb (324.1ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 24009ms (Views: 9866.6ms | ActiveRecord: 1462.8ms)
+
+
+  Rendered layouts/_messages.html.erb (0.1ms)
+Completed 200 OK in 23789ms (Views: 19065.5ms | ActiveRecord: 425.6ms)
+
+
+Started GET "/task_lists/15/edit" for 127.0.0.1 at 2018-10-05 17:09:47 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 69]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 70]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 71]]
+  Rendered task_lists/edit.html.erb within layouts/application (2273.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 6508ms (Views: 3189.3ms | ActiveRecord: 4.5ms)
+
+
+Started PATCH "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:10:10 +0530
+Processing by TaskListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sLqywEdwCptoATXDHi0I2etrJo/gM+7Tr6yFC2w+aozgNmwNOKU1ygu5SdoYIy+mdgfSCSLh3EJ43+p0BjPDhg==", "task_list"=>{"task_list_date"=>"2018-09-30", "allocated_to"=>"Swapnil Gite", "expense"=>"33", "taskks_attributes"=>{"0"=>{"task_consumer_no"=>"116", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Refill", "id"=>"61"}}, "id"=>"69"}, "1"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Fragrance Issue", "id"=>"62"}}, "id"=>"70"}, "2"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Urgent", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"Payment collection", "id"=>"63"}}, "id"=>"71"}}}, "commit"=>"Update Task list", "id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTaskk Load (89.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1 AND "taskks"."id" IN (69, 70, 71)[0m  [["task_list_id", 15]]
+  [1m[36mActivity Load (25.0ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 61[0m  [["taskk_id", 69]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 62[0m  [["taskk_id", 70]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 63[0m  [["taskk_id", 71]]
+  [1m[35mSQL (115.3ms)[0m  [1m[33mUPDATE "taskks" SET "task_consumer_no" = $1, "updated_at" = $2 WHERE "taskks"."id" = $3[0m  [["task_consumer_no", "116"], ["updated_at", "2018-10-05 11:40:10.309857"], ["id", 69]]
+  [1m[35m (148.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/task_lists/15
+Completed 302 Found in 863ms (ActiveRecord: 381.2ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:10:11 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (22.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (59.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (67.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (133.3ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 734ms (Views: 554.2ms | ActiveRecord: 149.4ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:10:54 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (16.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (38.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (4.6ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 201ms (Views: 177.6ms | ActiveRecord: 18.3ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:11:16 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (1.1ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (55.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (63.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (8.4ms)
+  Rendered layouts/_navigation.html.erb (41.9ms)
+  Rendered layouts/_messages.html.erb (6.0ms)
+Completed 200 OK in 372ms (Views: 309.7ms | ActiveRecord: 58.0ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:11:38 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (22.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (39.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 532ms (Views: 471.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:12:00 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (1.1ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (11.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 158ms (Views: 148.7ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:12:27 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (1.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (10.4ms)
+  Rendered layouts/_navigation_links.html.erb (1.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (7.9ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 449ms (Views: 421.7ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:12:45 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (1.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (11.0ms)
+  Rendered layouts/_navigation_links.html.erb (1.1ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (6.5ms)
+  Rendered layouts/_messages.html.erb (1.7ms)
+Completed 200 OK in 174ms (Views: 164.8ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:13:03 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.7ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (7.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (5.8ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 175ms (Views: 166.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:13:18 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (10.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.6ms)
+  Rendered layouts/_navigation.html.erb (4.9ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 176ms (Views: 168.1ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:13:30 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (11.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 175ms (Views: 167.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:13:47 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (1.8ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.5ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.5ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 299ms (Views: 289.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:14:02 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (2.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (11.7ms)
+  Rendered layouts/_navigation_links.html.erb (1.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (10.6ms)
+  Rendered layouts/_navigation.html.erb (15.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 237ms (Views: 227.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:14:13 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (22.4ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (13.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (44.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (5.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 176ms (Views: 131.5ms | ActiveRecord: 37.9ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:14:17 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.7ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (7.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (7.6ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 166ms (Views: 154.1ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:14:17 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.8ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 146ms (Views: 139.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:14:18 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (23.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.8ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (7.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (7.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 169ms (Views: 139.4ms | ActiveRecord: 25.3ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:14:47 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.3ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 156ms (Views: 148.3ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:15:12 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (6.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 179ms (Views: 172.4ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:15:30 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (7.8ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (6.0ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 150ms (Views: 142.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:17:40 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.7ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 248ms (Views: 241.4ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/task_lists/15" for 127.0.0.1 at 2018-10-05 17:17:57 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 15], ["LIMIT", 1]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 15]]
+  Rendered task_lists/show.html.erb within layouts/application (8.0ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.8ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 126ms (Views: 118.8ms | ActiveRecord: 2.6ms)
+
+

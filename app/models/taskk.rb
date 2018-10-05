@@ -77,6 +77,7 @@ def set_customer_details
     @xy =TaskList.find(@task.task_list_id)
 	@task.allocated_to = @xy.allocated_to
 	@task.activity = Activity.where(:taskk_id => self.id).first.name
+	@task.task_consumer_no_id = @task.id
     @task.save
 end
 

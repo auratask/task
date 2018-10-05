@@ -6,21 +6,21 @@
    <p class="text-success"><strong>Edit</strong> via clicking the Consumer Number</p>
 <table border="1" cellpadding="5" cellspacing="5">
   <tr>
-    <th>Consumer No</th>
-    <th>Name</th>
-    <th>Phone Number</th>
-    <th>Address</th>
-    <th>Area</th>
-    <th>Flavors</th>
-    <th>Machine Count</th>
-    <th>Activity</th>
-    <th>Instruction</th>
-    <th>Priority</th>
+    <th width="60">Consumer No</th>
+    <th width="100">Name</th>
+    <th width="70">Phone Number</th>
+    <th width="250">Address</th>
+    <th width="90">Area</th>
+    <th width="60">Flavors</th>
+    <th width="60">Machine Count</th>
+    <th width="70">Activity</th>
+    <th width="150">Instruction</th>
+    <th width="60">Priority</th>
   </tr>
  
   <% @task_list.taskks.each do |task| %>
     <tr>
-      <td height="100"><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
+      <td height="100"><%= link_to "#{task.task_consumer_no}", edit_taskk_path(task) %></td>
       <td height="100"><%= task.customer_name %></td>
       <td height="100"><%= task.customer_phone_number %></td>
       <td height="100"><%= task.customer_address %></td>
