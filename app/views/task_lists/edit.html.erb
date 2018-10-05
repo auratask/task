@@ -17,7 +17,7 @@
 <%= form_for @task_list do |f| %>
 <tr>
 	<td class: "width-form-fix-date" ><%= f.date_field :task_list_date, "data-provide" => 'datepicker'%></td>
-      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Emp1", "Emp2"], :include_blank => true )%></td>
+      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Sanjay Juvatkar", "Emp1","Emp2"], :include_blank => true )%></td>
       <td><%= f.text_field :expense %></td>	
 </tr>
 <br>
@@ -28,6 +28,8 @@
   	<th>Task no</th>
     <th>Consumer No</th>
     <th>Instructions</th>
+    <th>Rermarks</th>
+    <th>Cheque/Cash Details</th>
     <th>Priority</th>
     <th>Status</th>
     <th>Activity</th>
@@ -38,6 +40,8 @@
     	  <td><%= x%> </td>
           <td><%= task.select(:task_consumer_no,@consumer_nos, :include_blank => true) %></td>
 	      <td><%= task.text_field :instruction %></td>
+	      <td><%= task.text_field :remark %></td>
+	      <td><%= task.text_field :cheque_cash_detail %></td>
 	      <td><%= task.select(:priority,["Urgent", "Imp", "High", "Normal"]) %></td>
 	      <td><%= task.select(:status,[ "Not Done","Done", "Do it on Date"]) %></td>
 	      <%= task.fields_for :activities do |activity| %>
@@ -49,7 +53,7 @@
    <% end %> 	
   <% end %>
 </table>
-<%= f.submit %>
+<%= f.submit class: "btn btn-primary"%>
 <%end%>
 <br>
 

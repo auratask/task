@@ -6,3 +6,4 @@ class TaskList < ApplicationRecord
 	validates :expense , presence: true
 
 end
+

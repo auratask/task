@@ -83,7 +83,7 @@ section {
 
 // styles for some views
 .panel-primary {
-  width: 50%;
+  width: 75%;
 }
 .width-form-fix {
   width:40%
@@ -91,4 +91,10 @@ section {
 
 .width-form-fix-date {
   width:10%
+}
+
+.edit-table {
+    border: 1px solid black;
+    table-layout: fixed;
+    width: 1200px;
 }
