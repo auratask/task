@@ -26,7 +26,7 @@ def self.to_csv(options = {})
 
  def self.search(search)
     if search
-      find(:all, :conditions => ['consumer_no LIKE ?', "%#{search}%"])
+      where('task_consumer_no LIKE ?', "%#{search}%")
     
     end
  end

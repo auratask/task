@@ -1,5 +1,38 @@
 <%= form_tag taskks_sort_by_path, :method => :get do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search by Customer Name", :name => nil %>
+    <%= submit_tag "Search by Consumer no", :task_consumer_no => nil %>
 <% end %>
+
+<table border="3" cellpadding="7" cellspacing="5">
+  <tr>
+  	<th>Task no</th>
+    <th>Consumer No</th>
+    <th>Consumer Name</th>
+    <th>Instructions</th>
+    <th>Rermarks</th>
+    <th>Cheque/Cash Details</th>
+    <th>Status</th>
+    <th>Activity</th>
+  </tr>
+    <tr>
+    	<% x=1 %>
+    	<% @taskks.each do |task| %>
+    	  <td><%= x%> </td>
+          <td><%= task.task_consumer_no %></td>
+          <td><%= task.customer_name %></td>
+	      <td><%= task.instruction %></td>
+	      <td><%= task.remark %></td>
+	      <td><%= task.cheque_cash_detail %></td>
+	      <td><%= task.status%></td>
+	      <td><%= task.activity%></td>
+	      <td><%= task.allocated_to%></td>
+	      <td><%= task.created_at%></td>
+	      <td><% x=x+1 %></td>
+	      
+    </tr>
+    
+   <% end %> 	
+  
+</table>
+
