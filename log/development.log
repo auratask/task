@@ -12925,3 +12925,4 @@ Started GET "/taskks/sort_by" for 127.0.0.1 at 2018-10-10 14:39:47 +0530
   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 76], ["LIMIT", 1]]
   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 76], ["LIMIT", 1]]
   [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (95.9ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" ORDER BY "taskks"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
