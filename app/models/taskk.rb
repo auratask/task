@@ -23,6 +23,14 @@ def self.to_csv(options = {})
 	end
 
 
+
+ def self.search(search)
+    if search
+      find(:all, :conditions => ['consumer_no LIKE ?', "%#{search}%"])
+    
+    end
+ end
+
 def self.done_tasks(param)
 	@done_tasks=[]
 	param.each do |x|

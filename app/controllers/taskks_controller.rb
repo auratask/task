@@ -8,6 +8,12 @@ class TaskksController < ApplicationController
   def edit
   end
 
+  def sort_by
+    if params[:search].present?
+       @tasks = Taskk.search(params[:search])
+    end
+  end
+
   def index
   	@tasks = Taskk.all
   	@customers= User.customers

@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   get 'activity/index'
+  get 'taskks/sort_by'
 
 
   devise_for :users

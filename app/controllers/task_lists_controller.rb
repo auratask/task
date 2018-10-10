@@ -49,7 +49,7 @@ class TaskListsController < ApplicationController
 
    def task_list_params
    	  params["task_list"]["taskks_attributes"].delete_if {|k,v| v["task_consumer_no"] ==""}
-      params.require(:task_list).permit(:id, :task_list_date,:expense, :allocated_to, taskks_attributes: [:id,:task_consumer_no, :status,:cheque_cash_detail,:instruction, :allocated_to, :priority, activities_attributes:[:id, :name]])
+      params.require(:task_list).permit(:id, :task_list_date,:expense, :expense_utilized, :allocated_to, taskks_attributes: [:id,:task_consumer_no, :customer_name, :status,:cheque_cash_detail, :remark, :instruction, :allocated_to, :priority, activities_attributes:[:id, :name]])
    end
 
 end
