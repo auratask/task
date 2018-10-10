@@ -13,12 +13,14 @@
 <th>Date</th>
 <th>AllocatedTo</th>
 <th>Expense</th>
+<th>Expense Utilized</th>
 </tr>
 <%= form_for @task_list do |f| %>
 <tr>
 	<td class: "width-form-fix-date" ><%= f.date_field :task_list_date, "data-provide" => 'datepicker'%></td>
       <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Sanjay Juvatkar", "Emp1","Emp2"], :include_blank => true )%></td>
       <td><%= f.text_field :expense %></td>	
+      <td><%= f.text_field :expense_utilized %></td>	
 </tr>
 <br>
 <br>
@@ -27,6 +29,7 @@
   <tr>
   	<th>Task no</th>
     <th>Consumer No</th>
+    <th>Consumer Name</th>
     <th>Instructions</th>
     <th>Rermarks</th>
     <th>Cheque/Cash Details</th>
@@ -39,6 +42,7 @@
     	<%= f.fields_for :taskks do |task| %>
     	  <td><%= x%> </td>
           <td><%= task.select(:task_consumer_no,@consumer_nos, :include_blank => true) %></td>
+          <td><%= task.text_field :customer_name %></td>
 	      <td><%= task.text_field :instruction %></td>
 	      <td><%= task.text_field :remark %></td>
 	      <td><%= task.text_field :cheque_cash_detail %></td>

@@ -7,6 +7,7 @@ class Taskk < ApplicationRecord
 
 require 'csv'
 after_create_commit :set_customer_details, :set_task_parameters
+after_save :set_customer_details
 
 #@@customers = User.first.customers
 
@@ -57,6 +58,10 @@ def sort_by_client_number
 end
 
 def sort_by_employee
+	
+end
+
+def sort_by_activity
 	
 end
 

@@ -1,19 +1,19 @@
 
 <table border="1" cellpadding="5" cellspacing="5">
   <tr>
-<th>Date</th>
-<th>AllocatedTo</th>
-<th>Expense</th>
-</tr>
+    <th>Date</th>
+    <th>AllocatedTo</th>
+    <th>Expense</th>
+  </tr>
+
 <%= form_for @task_list do |f| %>
 <tr>
 	<td class: "width-form-fix-date" ><%= f.date_field :task_list_date, "data-provide" => 'datepicker'%></td>
-      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Sanjay Juvatkar","Emp1", "Emp2"], :include_blank => true )%></td>
+      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Sanjay Juvatkar","Sanjay Juwatkar","Emp1", "Emp2"], :include_blank => true )%></td>
       <td><%= f.text_field :expense %></td>	
 </tr>
 <br>
 <br>
-<br/>
 <table border="2" cellpadding="5" cellspacing="5">
   <tr>
   	<th>Task no</th>

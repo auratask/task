@@ -42,7 +42,7 @@ class TaskListsController < ApplicationController
   end
 
   def index
-  	@task_lists = TaskList.all
+  	@task_lists = TaskList.all.order(created_at: :desc)
   end
 
  private 
