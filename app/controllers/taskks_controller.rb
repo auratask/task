@@ -3,10 +3,23 @@ class TaskksController < ApplicationController
   end
 
   def show
+    @taskk =Taskk.find(params[:id])
+    respond_to do |format|
+      format.html
+      
+    end
   end
 
   def edit
+    @taskk = Taskk.find(params[:id])
   end
+
+  def update
+    @taskk  =Taskk.find(params[:id])
+    @taskk.update_attributes(task_params)
+    redirect_to taskk_path(@taskk)
+  end
+
 
   def sort_by
     if params[:search].present?
@@ -23,4 +36,11 @@ class TaskksController < ApplicationController
   	  format.xls {send_data @tasks.to_csv(col_sep: "\t") }
   	end
   end
+
+private 
+
+   def task_params
+      params.require(:taskk).permit(:id,:task_consumer_no, :customer_name, :status,:cheque_cash_detail, :remark, :instruction, :allocated_to, :priority, activities_attributes:[:id, :name])
+   end
+
 end

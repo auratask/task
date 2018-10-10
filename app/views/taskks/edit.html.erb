@@ -1,2 +1,35 @@
 <h1>Taskks#edit</h1>
-<p>Find me in app/views/taskks/edit.html.erb</p>
+<table border="3" cellpadding="7" cellspacing="5">
+  <tr>
+  	<th>Task no</th>
+    <th>Consumer No</th>
+    <th>Consumer Name</th>
+    <th>Instructions</th>
+    <th>Rermarks</th>
+    <th>Cheque/Cash Details</th>
+    <th>Priority</th>
+    <th>Status</th>
+    <th>Allocation date</th>
+    <th>Activity</th>
+  </tr>
+    <tr>
+    	<% x=1 %>
+    	<%= form_for :taskk do |task|  %>
+    	  <td><%= x%> </td>
+          <td><%= task.text_field :task_consumer_no %></td>
+          <td><%= task.text_field :customer_name %></td>
+	      <td><%= task.text_field :instruction %></td>
+	      <td><%= task.text_field :remark %></td>
+	      <td><%= task.text_field :cheque_cash_detail %></td>
+	      <td><%= task.select(:priority,["Urgent", "Imp", "High", "Normal"]) %></td>
+	      <td><%= task.select(:status,[ "Not Done","Done", "Do it on Date"]) %></td>
+	      <td><%= task.date_field :created_at %></td>
+	      <%= task.fields_for :activities do |activity| %>
+	      <td><%= activity.select(:name,["Refill", "Machine Issue", "Fragrance Issue", "Payment collection", "Demo", "P.Demo", "Bill Change", "CellChange", "Installation",  "FShow","Machine Remove","Other" ], :include_blank => true) %></td>
+	      <td><% x=x+1 %></td>
+	      
+    </tr>
+  <% end %>
+</table>
+<%= task.submit class: "btn btn-primary"%>
+<% end %>

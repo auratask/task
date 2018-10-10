@@ -9,7 +9,7 @@
 <%= form_for @task_list do |f| %>
 <tr>
 	<td class: "width-form-fix-date" ><%= f.date_field :task_list_date, "data-provide" => 'datepicker'%></td>
-      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Sanjay Juvatkar","Sanjay Juwatkar","Emp1", "Emp2"], :include_blank => true )%></td>
+      <td><%= f.select(:allocated_to,["Swapnil Gite", "Rohit Katkar", "Sonu Kannojiya", "Rohit Kannojiya", "Hemant Gaikwad", "Jitesh Bagul", "Sandesh Jadhav", "Sanjay Juvatkar","Emp1", "Emp2"], :include_blank => true )%></td>
       <td><%= f.text_field :expense %></td>	
 </tr>
 <br>
@@ -33,7 +33,7 @@
 	      <td><%= task.select(:priority,["Urgent", "Imp", "High", "Normal"]) %></td>
 	      <td><%= task.select(:status,[ "Not Done","Done", "Do it on Date"]) %></td>
 	      <%= task.fields_for :activities do |activity| %>
-	      <td><%= activity.select(:name,["Refill", "Machine Issue", "Fragrance Issue", "Payment collection", "Demo", "P.Demo", "Bill Change", "CellChange", "Installation", "FShow","Other" ], :include_blank => true) %></td>
+	      <td><%= activity.select(:name,["Refill", "Machine Issue", "Fragrance Issue", "Payment collection", "Demo", "P.Demo", "Bill Change", "CellChange", "Installation", "FShow", "Remove Machine","Other" ], :include_blank => true) %></td>
 	      
     </tr>
     <% end %>

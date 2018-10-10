@@ -82,6 +82,7 @@ def set_customer_details
 		end
 	end
     @task.customer_name = @customer["name"]
+    @task.instruction = "#{@task.instruction} and #{Taskk.where(:task_consumer_no => @customer["consumer_no"]).second_to_last.remark}"
     @task.customer_phone_number = @customer["phone_number"]
     @task.customer_address = @customer["address"] 
     @task.customer_area = @customer["area"]

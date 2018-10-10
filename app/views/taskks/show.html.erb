@@ -1,2 +1,33 @@
 <h1>Taskks#show</h1>
-<p>Find me in app/views/taskks/show.html.erb</p>
+<h3> <%= link_to "Edit Task", edit_taskk_path(@taskk)%></h3>
+<p>This task is allocated to <b><%=@taskk.allocated_to%></b></p>   
+<table  border="2" cellpadding="2" cellspacing="2" class="edit-table">
+  <tr>
+    <th  height="60px", width="40px">Consumer No</th>
+    <th width="40">Name</th>
+    <th width="40">Phone Number</th>
+    <th width="100">Address</th>
+    <th width="30">Area</th>
+    <th width="60">Flavors</th>
+    <th width="30">Machine Count</th>
+    <th width="40">Activity</th>
+    <th width="60">Instruction</th>
+    <th width="60">Priority</th>
+  </tr>
+ 
+  
+    <tr>
+      <td height="80"><%= @taskk.task_consumer_no %></td>
+      <td height="80"><%= @taskk.customer_name %></td>
+      <td height="80"><%= @taskk.customer_phone_number.to_s %></td>
+      <td height="80"><%= @taskk.customer_address %></td>
+      <td height="80"><%= @taskk.customer_area %></td>
+      <td height="80"><%= @taskk.customer_flavors %></td>
+      <td height="80"><%= @taskk.customer_machine_count%></td>
+      <td height="80"><%= @taskk.activity%></td>
+      <td height="80"><%= @taskk.instruction%></td>
+      <td height="80"><%= @taskk.priority%></td>
+    </tr>
+  
+</table>
+<br>
