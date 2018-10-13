@@ -9,6 +9,7 @@
     <th>Task date</th>
     <th>Allocated</th>
     <th>Expense</th>
+    <th>Delete record</th>
   </tr>
  
   <% @task_lists.each do |task_list| %>
@@ -17,6 +18,7 @@
       <td><%= link_to task_list.task_list_date.strftime("%d/%m/%y"), edit_task_list_path(task_list) %></td>
       <td><%= task_list.allocated_to%></td>
       <td><%= task_list.expense%></td>
+      <td><%=  link_to 'Delete Record', task_list,data: { confirm: 'Are you sure?' },:method => :delete , :class => "btn btn-mini btn-primary" %></td>
       </tr>
     <% end %>
 </table>

@@ -30,6 +30,16 @@ class TaskListsController < ApplicationController
     end
   end
 
+  def destroy
+      @task_list = TaskList.find(params[:id])
+      @task_list.destroy
+ 
+      respond_to do |format|
+        format.html { redirect_to task_lists_url }
+        format.json { head :no_content }
+      end
+  end
+
   def edit
     @consumer_nos = User.consumer_nos
     @task_list =TaskList.find(params[:id])
