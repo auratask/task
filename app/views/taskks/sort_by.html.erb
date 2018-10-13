@@ -16,8 +16,9 @@
     <th>Activity</th>
   </tr>
     <tr>
-    	<% x=1 %>
-    	<% @taskks.each do |task| %>
+    	<% if @taskks.present? %>
+    		<% x=1 %>
+    	<%  @taskks.each  do |task| %>
     	  <td><%= x%> </td>
           <td><%= task.task_consumer_no %></td>
           <td><%= task.customer_name %></td>
@@ -29,10 +30,13 @@
 	      <td><%= task.allocated_to%></td>
 	      <td><%= task.created_at%></td>
 	      <td><% x=x+1 %></td>
-	      
-    </tr>
+	      <% end %> 	
+    	<%else%>
+    		
+    	<%end%>
+            </tr>
     
-   <% end %> 	
+   
   
 </table>
 
