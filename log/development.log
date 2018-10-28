@@ -17838,3 +17838,825 @@ Processing by TaskListsController#show as HTML
 Completed 200 OK in 1775ms (Views: 956.8ms | ActiveRecord: 155.0ms)
 
 
+Started GET "/task_lists/38/edit" for 127.0.0.1 at 2018-10-29 00:01:53 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"38"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 38]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 38]]
+  [1m[36mActivity Load (21.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 111]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 108]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 109]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 110]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 112]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 113]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 114]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 115]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 116]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 117]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 118]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 119]]
+  Rendered task_lists/edit.html.erb within layouts/application (884.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.8ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (5.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 7374ms (Views: 1458.3ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2018-10-29 00:02:06 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (4.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" ORDER BY "taskks"."created_at" DESC[0m
+  Rendered taskks/index.html.erb within layouts/application (123.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (5.9ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 6489ms (Views: 413.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-29 00:02:19 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (104.1ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists" ORDER BY "task_lists"."created_at" DESC[0m
+  Rendered task_lists/index.html.erb within layouts/application (121.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.1ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 236ms (Views: 105.7ms | ActiveRecord: 104.8ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-10-29 00:02:23 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (223.2ms)
+  Rendered task_lists/new.html.erb within layouts/application (235.2ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (5.6ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 5209ms (Views: 365.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/task_lists/new" for 127.0.0.1 at 2018-10-29 00:02:37 +0530
+Processing by TaskListsController#new as HTML
+  [1m[36mUser Load (4.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering task_lists/new.html.erb within layouts/application
+  Rendered task_lists/_task_list_form.html.erb (193.8ms)
+  Rendered task_lists/new.html.erb within layouts/application (195.7ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.2ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 6028ms (Views: 400.3ms | ActiveRecord: 5.4ms)
+
+
+Started POST "/task_lists" for 127.0.0.1 at 2018-10-29 00:03:38 +0530
+Processing by TaskListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"scyv/LgXMU1deafrcexFf8n9/2WhdKWgIWErYA2Mx7lgir+XgDow3A8hkLZWknbQRbVWjzB3dmUI0yYotts5+Q==", "task_list"=>{"task_list_date"=>"2018-10-30", "allocated_to"=>"Swapnil Gite", "expense"=>"20", "taskks_attributes"=>{"0"=>{"task_consumer_no"=>"101", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "1"=>{"task_consumer_no"=>"119", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "2"=>{"task_consumer_no"=>"102", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "3"=>{"task_consumer_no"=>"102", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "4"=>{"task_consumer_no"=>"101", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "5"=>{"task_consumer_no"=>"102", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "6"=>{"task_consumer_no"=>"103", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "7"=>{"task_consumer_no"=>"104", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "8"=>{"task_consumer_no"=>"105", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "9"=>{"task_consumer_no"=>"106", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "10"=>{"task_consumer_no"=>"107", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}, "11"=>{"task_consumer_no"=>"108", "instruction"=>"", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>""}}}}}, "commit"=>"Create Task list"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (17.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (118.9ms)[0m  [1m[32mINSERT INTO "task_lists" ("expense", "allocated_to", "task_list_date", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["expense", 20], ["allocated_to", "Swapnil Gite"], ["task_list_date", "2018-10-30 00:00:00"], ["created_at", "2018-10-28 18:33:38.786077"], ["updated_at", "2018-10-28 18:33:38.786077"]]
+  [1m[35mSQL (27.2ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "101"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:38.941246"], ["updated_at", "2018-10-28 18:33:38.941246"], ["task_list_id", 40]]
+  [1m[35mSQL (19.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:38.970606"], ["updated_at", "2018-10-28 18:33:38.970606"], ["taskk_id", 132]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "119"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:38.991924"], ["updated_at", "2018-10-28 18:33:38.991924"], ["task_list_id", 40]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:38.994432"], ["updated_at", "2018-10-28 18:33:38.994432"], ["taskk_id", 133]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "102"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:38.997120"], ["updated_at", "2018-10-28 18:33:38.997120"], ["task_list_id", 40]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:38.999483"], ["updated_at", "2018-10-28 18:33:38.999483"], ["taskk_id", 134]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "102"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.001939"], ["updated_at", "2018-10-28 18:33:39.001939"], ["task_list_id", 40]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.004284"], ["updated_at", "2018-10-28 18:33:39.004284"], ["taskk_id", 135]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "101"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.006531"], ["updated_at", "2018-10-28 18:33:39.006531"], ["task_list_id", 40]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.008893"], ["updated_at", "2018-10-28 18:33:39.008893"], ["taskk_id", 136]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "102"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.011345"], ["updated_at", "2018-10-28 18:33:39.011345"], ["task_list_id", 40]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.013691"], ["updated_at", "2018-10-28 18:33:39.013691"], ["taskk_id", 137]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "103"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.017203"], ["updated_at", "2018-10-28 18:33:39.017203"], ["task_list_id", 40]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.020352"], ["updated_at", "2018-10-28 18:33:39.020352"], ["taskk_id", 138]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "104"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.023316"], ["updated_at", "2018-10-28 18:33:39.023316"], ["task_list_id", 40]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.025741"], ["updated_at", "2018-10-28 18:33:39.025741"], ["taskk_id", 139]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "105"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.028291"], ["updated_at", "2018-10-28 18:33:39.028291"], ["task_list_id", 40]]
+  [1m[35mSQL (93.1ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.030695"], ["updated_at", "2018-10-28 18:33:39.030695"], ["taskk_id", 140]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "106"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.125742"], ["updated_at", "2018-10-28 18:33:39.125742"], ["task_list_id", 40]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.128212"], ["updated_at", "2018-10-28 18:33:39.128212"], ["taskk_id", 141]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "107"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.131127"], ["updated_at", "2018-10-28 18:33:39.131127"], ["task_list_id", 40]]
+  [1m[35mSQL (2.2ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.133381"], ["updated_at", "2018-10-28 18:33:39.133381"], ["taskk_id", 142]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "taskks" ("task_consumer_no", "status", "instruction", "priority", "created_at", "updated_at", "task_list_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["task_consumer_no", "108"], ["status", "Not Done"], ["instruction", ""], ["priority", "Normal"], ["created_at", "2018-10-28 18:33:39.138195"], ["updated_at", "2018-10-28 18:33:39.138195"], ["task_list_id", 40]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "activities" ("name", "created_at", "updated_at", "taskk_id") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", ""], ["created_at", "2018-10-28 18:33:39.140927"], ["updated_at", "2018-10-28 18:33:39.140927"], ["taskk_id", 143]]
+  [1m[35m (29.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 132], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (22.9ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 132], ["updated_at", "2018-10-28 18:33:39.183966"], ["id", 132]]
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 133], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 133], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 133], ["updated_at", "2018-10-28 18:33:39.247386"], ["id", 133]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 134], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 134], ["updated_at", "2018-10-28 18:33:39.270299"], ["id", 134]]
+  [1m[35m (12.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 135], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 135], ["updated_at", "2018-10-28 18:33:39.291209"], ["id", 135]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 136], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.3ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 136], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 136], ["updated_at", "2018-10-28 18:33:39.313648"], ["id", 136]]
+  [1m[35m (13.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.3ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 137], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 137], ["updated_at", "2018-10-28 18:33:39.335488"], ["id", 137]]
+  [1m[35m (13.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 138], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 138], ["updated_at", "2018-10-28 18:33:39.358806"], ["id", 138]]
+  [1m[35m (11.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.6ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (1.0ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 139], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.4ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 139], ["updated_at", "2018-10-28 18:33:39.382874"], ["id", 139]]
+  [1m[35m (4.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mTaskList Load (2.9ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 140], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 140], ["updated_at", "2018-10-28 18:33:39.406039"], ["id", 140]]
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 141], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 141], ["updated_at", "2018-10-28 18:33:39.426167"], ["id", 141]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 142], ["LIMIT", 1]]
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 142], ["updated_at", "2018-10-28 18:33:39.448563"], ["id", 142]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT  "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 ORDER BY "activities"."id" ASC LIMIT $2[0m  [["taskk_id", 143], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[33mUPDATE "taskks" SET "allocated_to" = $1, "activity" = $2, "task_consumer_no_id" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["allocated_to", "Swapnil Gite"], ["activity", ""], ["task_consumer_no_id", 143], ["updated_at", "2018-10-28 18:33:39.467769"], ["id", 143]]
+  [1m[35m (12.3ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/task_lists/40
+Completed 302 Found in 770ms (ActiveRecord: 523.6ms)
+
+
+Started GET "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:03:39 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (1.1ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (1.1ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  [1m[36mTaskk Load (37.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 132], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (8.5ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "101"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Arindam Developers LLP"], ["instruction", " and "], ["customer_phone_number", "09930943575/"], ["customer_address", "Floor No. 33, Shangrilla Hotel, Palladium, Lower pare"], ["customer_area", "Lower Parel"], ["customer_flavors", "Sensual 12"], ["customer_machine_count", 12], ["updated_at", "2018-10-28 18:33:44.070918"], ["id", 132]]
+  [1m[35m (64.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 133], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "119"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Shete's Institute Of Academics Pvt. Ltd."], ["instruction", " and "], ["customer_phone_number", " 0251 231 8442"], ["customer_address", "3rd Floor, Mulchandani Shopping Centre, Oak Baug, Station Road, Kalyan West, Thane, Maharashtra 421301"], ["customer_area", "Kalyan West"], ["customer_flavors", "lily 6"], ["customer_machine_count", 6], ["updated_at", "2018-10-28 18:33:48.643008"], ["id", 133]]
+  [1m[35m (60.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 134], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "102"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Lotus Pond Hotel Pvt Ltd"], ["instruction", " and "], ["customer_phone_number", "8451059512/ 022 6159 4000 ram"], ["customer_address", "Plot No X - 4/5 - B, Shilphata Road, TTC Industrial Area, MIDC, Mahape, Navi Mumbai, 400701"], ["customer_area", "Mahape"], ["customer_flavors", " 16 faraheight"], ["customer_machine_count", 16], ["updated_at", "2018-10-28 18:33:53.442671"], ["id", 134]]
+  [1m[35m (15.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 135], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.6ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "102"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Lotus Pond Hotel Pvt Ltd"], ["instruction", " and "], ["customer_phone_number", "8451059512/ 022 6159 4000 ram"], ["customer_address", "Plot No X - 4/5 - B, Shilphata Road, TTC Industrial Area, MIDC, Mahape, Navi Mumbai, 400701"], ["customer_area", "Mahape"], ["customer_flavors", " 16 faraheight"], ["customer_machine_count", 16], ["updated_at", "2018-10-28 18:33:58.206437"], ["id", 135]]
+  [1m[35m (16.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 136], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.2ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "101"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Arindam Developers LLP"], ["instruction", " and "], ["customer_phone_number", "09930943575/"], ["customer_address", "Floor No. 33, Shangrilla Hotel, Palladium, Lower pare"], ["customer_area", "Lower Parel"], ["customer_flavors", "Sensual 12"], ["customer_machine_count", 12], ["updated_at", "2018-10-28 18:34:04.071982"], ["id", 136]]
+  [1m[35m (51.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 137], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "102"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Lotus Pond Hotel Pvt Ltd"], ["instruction", " and "], ["customer_phone_number", "8451059512/ 022 6159 4000 ram"], ["customer_address", "Plot No X - 4/5 - B, Shilphata Road, TTC Industrial Area, MIDC, Mahape, Navi Mumbai, 400701"], ["customer_area", "Mahape"], ["customer_flavors", " 16 faraheight"], ["customer_machine_count", 16], ["updated_at", "2018-10-28 18:34:08.407595"], ["id", 137]]
+  [1m[35m (40.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 138], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "103"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Dena Bank"], ["instruction", " and "], ["customer_phone_number", "0251 2713278/ 8898777555"], ["customer_address", "Furniture Bazar, Ulhasnagar 2"], ["customer_area", "Ulhasnager 2"], ["customer_flavors", "Lavender"], ["customer_machine_count", 4], ["updated_at", "2018-10-28 18:34:12.458448"], ["id", 138]]
+  [1m[35m (18.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 139], ["LIMIT", 1]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "104"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Dilip Jaisinghani"], ["instruction", " and "], ["customer_phone_number", "9322723000/ 0251 2703269"], ["customer_address", "Nanik Apt; Office No 7, Near Sai Kripa Gas Agency, Ulhasnagar 1"], ["customer_area", "Ulhasnagar 1"], ["customer_flavors", "lily"], ["customer_machine_count", 1], ["updated_at", "2018-10-28 18:34:17.103155"], ["id", 139]]
+  [1m[35m (18.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (1.2ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 140], ["LIMIT", 1]]
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "105"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Dr Alok Pol"], ["instruction", " and "], ["customer_phone_number", "9820128663"], ["customer_address", "1st Floor, Dwarkdas Mansion, Opp Post office, Above Utsav Shoppi"], ["customer_area", "Kalyan West"], ["customer_flavors", "Green apple"], ["customer_machine_count", 1], ["updated_at", "2018-10-28 18:34:21.092481"], ["id", 140]]
+  [1m[35m (23.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.5ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 141], ["LIMIT", 1]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "106"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "Kateeleshwari Developers Pvt Ltd"], ["instruction", " and "], ["customer_phone_number", "02221645060/ 7738717070"], ["customer_address", "Next to R . Mall , L.B.S. Marg, Mulund ( West ), \r\nMumbai - 400 080."], ["customer_area", "Mulund Check Naka"], ["customer_flavors", "flagask 4"], ["customer_machine_count", 4], ["updated_at", "2018-10-28 18:34:27.539214"], ["id", 141]]
+  [1m[35m (15.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.6ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 142], ["LIMIT", 1]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "107"]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "\tIIFL Securities Limited"], ["instruction", " and "], ["customer_phone_number", "9322356008 Ahire Yuvan Maan"], ["customer_address", "IIFL Centre, Senapati Bapat Marg, Kamla City, Lower Parel, Mum 400013"], ["customer_area", "Lower Parel"], ["customer_flavors", "Mix"], ["customer_machine_count", 2], ["updated_at", "2018-10-28 18:34:30.811706"], ["id", 142]]
+  [1m[35m (11.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTaskk Load (0.4ms)[0m  [1m[34mSELECT  "taskks".* FROM "taskks" WHERE "taskks"."id" = $1 LIMIT $2[0m  [["id", 143], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mTaskk Load (1.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_consumer_no" = $1 ORDER BY "taskks"."id" ASC[0m  [["task_consumer_no", "108"]]
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "customer_name" = $1, "instruction" = $2, "customer_phone_number" = $3, "customer_address" = $4, "customer_area" = $5, "customer_flavors" = $6, "customer_machine_count" = $7, "updated_at" = $8 WHERE "taskks"."id" = $9[0m  [["customer_name", "IIFL Wealth Management Ltd"], ["instruction", " and updated remark"], ["customer_phone_number", ""], ["customer_address", "IIFL Centre, Senapati Bapat Marg, Kamla City, Lower Parel, Mum 400013"], ["customer_area", "Lower Parel"], ["customer_flavors", "mix"], ["customer_machine_count", 11], ["updated_at", "2018-10-28 18:34:34.293316"], ["id", 143]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  Rendering task_lists/show.html.erb within layouts/application
+  Rendered task_lists/show.html.erb within layouts/application (65.7ms)
+Completed 500 Internal Server Error in 54811ms (ActiveRecord: 428.4ms)
+
+
+  
+ActionView::Template::Error (undefined method `+' for nil:NilClass):
+    1: <h1>Listing all the tasks in Task List</h1> 
+    2: <h3> <%= link_to "Edit Task List", edit_task_list_path(@task_list)%></h3>
+    3: <p> Refill Count: <%= @task_list.taskks.collect {|x| x.customer_machine_count}.sum %></p>
+    4: <p> Tasks Count: <%= @task_list.taskks.count %> </p>
+    5: <p>This task is allocated to <b><%=@task_list.allocated_to%></b></p>
+    6:    <p class="text-success"><strong>Edit</strong> via clicking the Consumer Number</p>
+  
+app/views/task_lists/show.html.erb:3:in `_app_views_task_lists_show_html_erb__338610230__660671828'
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (8.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.9ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (67.1ms)
+Started GET "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:05:44 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  Rendering task_lists/show.html.erb within layouts/application
+  Rendered task_lists/show.html.erb within layouts/application (3000.9ms)
+Completed 500 Internal Server Error in 3066ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/task_lists/show.html.erb:4: syntax error, unexpected '<'
+<p> Tasks Count: '.freeze;@out...
+^
+/home/rahul/task/app/views/task_lists/show.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+<p> Tasks Count: '.freeze;@output_buffer.appe...
+          ^~~~~~
+/home/rahul/task/app/views/task_lists/show.html.erb:5: unknown regexp option - b
+/home/rahul/task/app/views/task_lists/show.html.erb:5: syntax error, unexpected '<'
+...utput_buffer.safe_append='</b></p>
+...                              ^
+/home/rahul/task/app/views/task_lists/show.html.erb:6: unknown regexp options - trg
+/home/rahul/task/app/views/task_lists/show.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...rong>Edit</strong> via clicking the Consumer Number</p>
+...                       ^~~~~~~~
+/home/rahul/task/app/views/task_lists/show.html.erb:9: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:10: syntax error, unexpected '<'
+    <th width="40">Name</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:11: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:12: syntax error, unexpected '<'
+    <th width="100">Address</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:13: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:14: syntax error, unexpected '<'
+    <th width="60">Flavors</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:15: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:16: syntax error, unexpected '<'
+    <th width="40">Activity</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:17: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:18: syntax error, unexpected '<'
+    <th width="60">Priority</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:19: unknown regexp options - tr
+/home/rahul/task/app/views/task_lists/show.html.erb:23: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:24: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:25: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:26: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:27: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:28: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:29: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:30: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:31: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:32: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:33: syntax error, unexpected '<'
+    </tr>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:35: unknown regexp options - tabl
+/home/rahul/task/app/views/task_lists/show.html.erb:36: syntax error, unexpected '<'
+<br>'.freeze;@output_buffer.to...
+^
+/home/rahul/task/app/views/task_lists/show.html.erb:39: unterminated string meets end of file
+          end
+             ^
+/home/rahul/task/app/views/task_lists/show.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/task_lists/show.html.erb:4: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+app/views/task_lists/show.html.erb:5: unknown regexp option - b
+app/views/task_lists/show.html.erb:5: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:6: unknown regexp options - trg
+app/views/task_lists/show.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/task_lists/show.html.erb:9: unknown regexp options - th
+app/views/task_lists/show.html.erb:10: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:11: unknown regexp options - th
+app/views/task_lists/show.html.erb:12: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:13: unknown regexp options - th
+app/views/task_lists/show.html.erb:14: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:15: unknown regexp options - th
+app/views/task_lists/show.html.erb:16: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:17: unknown regexp options - th
+app/views/task_lists/show.html.erb:18: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:19: unknown regexp options - tr
+app/views/task_lists/show.html.erb:23: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:24: unknown regexp options - td
+app/views/task_lists/show.html.erb:25: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:26: unknown regexp options - td
+app/views/task_lists/show.html.erb:27: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:28: unknown regexp options - td
+app/views/task_lists/show.html.erb:29: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:30: unknown regexp options - td
+app/views/task_lists/show.html.erb:31: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:32: unknown regexp options - td
+app/views/task_lists/show.html.erb:33: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:35: unknown regexp options - tabl
+app/views/task_lists/show.html.erb:36: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:39: unterminated string meets end of file
+app/views/task_lists/show.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (11.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.6ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.1ms)
+Started GET "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:07:13 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  Rendering task_lists/show.html.erb within layouts/application
+  Rendered task_lists/show.html.erb within layouts/application (1.8ms)
+Completed 500 Internal Server Error in 145ms (ActiveRecord: 1.9ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/task_lists/show.html.erb:4: syntax error, unexpected '<'
+<p> Tasks Count: '.freeze;@out...
+^
+/home/rahul/task/app/views/task_lists/show.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+<p> Tasks Count: '.freeze;@output_buffer.appe...
+          ^~~~~~
+/home/rahul/task/app/views/task_lists/show.html.erb:5: unknown regexp option - b
+/home/rahul/task/app/views/task_lists/show.html.erb:5: syntax error, unexpected '<'
+...utput_buffer.safe_append='</b></p>
+...                              ^
+/home/rahul/task/app/views/task_lists/show.html.erb:6: unknown regexp options - trg
+/home/rahul/task/app/views/task_lists/show.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...rong>Edit</strong> via clicking the Consumer Number</p>
+...                       ^~~~~~~~
+/home/rahul/task/app/views/task_lists/show.html.erb:9: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:10: syntax error, unexpected '<'
+    <th width="40">Name</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:11: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:12: syntax error, unexpected '<'
+    <th width="100">Address</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:13: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:14: syntax error, unexpected '<'
+    <th width="60">Flavors</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:15: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:16: syntax error, unexpected '<'
+    <th width="40">Activity</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:17: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:18: syntax error, unexpected '<'
+    <th width="60">Priority</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:19: unknown regexp options - tr
+/home/rahul/task/app/views/task_lists/show.html.erb:23: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:24: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:25: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:26: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:27: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:28: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:29: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:30: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:31: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:32: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:33: syntax error, unexpected '<'
+    </tr>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:35: unknown regexp options - tabl
+/home/rahul/task/app/views/task_lists/show.html.erb:36: syntax error, unexpected '<'
+<br>'.freeze;@output_buffer.to...
+^
+/home/rahul/task/app/views/task_lists/show.html.erb:39: unterminated string meets end of file
+          end
+             ^
+/home/rahul/task/app/views/task_lists/show.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/task_lists/show.html.erb:4: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+app/views/task_lists/show.html.erb:5: unknown regexp option - b
+app/views/task_lists/show.html.erb:5: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:6: unknown regexp options - trg
+app/views/task_lists/show.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/task_lists/show.html.erb:9: unknown regexp options - th
+app/views/task_lists/show.html.erb:10: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:11: unknown regexp options - th
+app/views/task_lists/show.html.erb:12: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:13: unknown regexp options - th
+app/views/task_lists/show.html.erb:14: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:15: unknown regexp options - th
+app/views/task_lists/show.html.erb:16: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:17: unknown regexp options - th
+app/views/task_lists/show.html.erb:18: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:19: unknown regexp options - tr
+app/views/task_lists/show.html.erb:23: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:24: unknown regexp options - td
+app/views/task_lists/show.html.erb:25: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:26: unknown regexp options - td
+app/views/task_lists/show.html.erb:27: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:28: unknown regexp options - td
+app/views/task_lists/show.html.erb:29: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:30: unknown regexp options - td
+app/views/task_lists/show.html.erb:31: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:32: unknown regexp options - td
+app/views/task_lists/show.html.erb:33: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:35: unknown regexp options - tabl
+app/views/task_lists/show.html.erb:36: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:39: unterminated string meets end of file
+app/views/task_lists/show.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.5ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.0ms)
+Started GET "/" for 127.0.0.1 at 2018-10-29 00:07:24 +0530
+Processing by TaskksController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering taskks/index.html.erb within layouts/application
+  [1m[36mTaskk Load (2.4ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" ORDER BY "taskks"."created_at" DESC[0m
+  Rendered taskks/index.html.erb within layouts/application (56.9ms)
+  Rendered layouts/_navigation_links.html.erb (0.7ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.5ms)
+  Rendered layouts/_navigation.html.erb (36.0ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 6384ms (Views: 774.4ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/task_lists" for 127.0.0.1 at 2018-10-29 00:07:34 +0530
+Processing by TaskListsController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering task_lists/index.html.erb within layouts/application
+  [1m[36mTaskList Load (1.0ms)[0m  [1m[34mSELECT "task_lists".* FROM "task_lists" ORDER BY "task_lists"."created_at" DESC[0m
+  Rendered task_lists/index.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.3ms)
+  Rendered layouts/_navigation.html.erb (4.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 138ms (Views: 112.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/task_lists/40/edit" for 127.0.0.1 at 2018-10-29 00:07:37 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (0.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 132]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 133]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 134]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 135]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 136]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 137]]
+  [1m[36mActivity Load (0.8ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 138]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 139]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 140]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 141]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 142]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 143]]
+  Rendered task_lists/edit.html.erb within layouts/application (380.5ms)
+  Rendered layouts/_navigation_links.html.erb (0.9ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (6.3ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 5045ms (Views: 495.7ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/task_lists/40/edit" for 127.0.0.1 at 2018-10-29 00:08:29 +0530
+Processing by TaskListsController#edit as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.5ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (1.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  Rendering task_lists/edit.html.erb within layouts/application
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 132]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 133]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 134]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 135]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 136]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 137]]
+  [1m[36mActivity Load (0.4ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 138]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 139]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 140]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 141]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 142]]
+  [1m[36mActivity Load (0.5ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1[0m  [["taskk_id", 143]]
+  Rendered task_lists/edit.html.erb within layouts/application (312.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.6ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.7ms)
+  Rendered layouts/_navigation.html.erb (5.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 4809ms (Views: 395.2ms | ActiveRecord: 9.1ms)
+
+
+Started PATCH "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:08:59 +0530
+Processing by TaskListsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"20AVZJyDuvCH1/uYBzrqcOhaTIA+pKXlwYzbIweT2XKX34heydnXVxKWVig3y9QBtei5uZVSIJfjoWU/362IDA==", "task_list"=>{"task_list_date"=>"2018-10-30", "allocated_to"=>"Swapnil Gite", "expense"=>"20", "expense_utilized"=>"", "taskks_attributes"=>{"0"=>{"task_consumer_no"=>"101", "customer_name"=>"Arindam Developers LLP", "instruction"=>"drtdtrdtydytfghf and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"124"}}, "id"=>"132"}, "1"=>{"task_consumer_no"=>"119", "customer_name"=>"Shete's Institute Of Academics Pvt. Ltd.", "instruction"=>" cfghvcjgvnbvand ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"125"}}, "id"=>"133"}, "2"=>{"task_consumer_no"=>"102", "customer_name"=>"Lotus Pond Hotel Pvt Ltd", "instruction"=>" cvhgfcghcf and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"126"}}, "id"=>"134"}, "3"=>{"task_consumer_no"=>"102", "customer_name"=>"Lotus Pond Hotel Pvt Ltd", "instruction"=>" chfchgc and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"127"}}, "id"=>"135"}, "4"=>{"task_consumer_no"=>"101", "customer_name"=>"Arindam Developers LLP", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"128"}}, "id"=>"136"}, "5"=>{"task_consumer_no"=>"102", "customer_name"=>"Lotus Pond Hotel Pvt Ltd", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"129"}}, "id"=>"137"}, "6"=>{"task_consumer_no"=>"103", "customer_name"=>"Dena Bank", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"130"}}, "id"=>"138"}, "7"=>{"task_consumer_no"=>"104", "customer_name"=>"Dilip Jaisinghani", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"131"}}, "id"=>"139"}, "8"=>{"task_consumer_no"=>"105", "customer_name"=>"Dr Alok Pol", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"132"}}, "id"=>"140"}, "9"=>{"task_consumer_no"=>"106", "customer_name"=>"Kateeleshwari Developers Pvt Ltd", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"133"}}, "id"=>"141"}, "10"=>{"task_consumer_no"=>"107", "customer_name"=>"\tIIFL Securities Limited", "instruction"=>" and ", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"134"}}, "id"=>"142"}, "11"=>{"task_consumer_no"=>"108", "customer_name"=>"IIFL Wealth Management Ltd", "instruction"=>" and updated remark", "remark"=>"", "cheque_cash_detail"=>"", "refill_count"=>"0", "done_count"=>"0", "return_count"=>"0", "priority"=>"Normal", "status"=>"Not Done", "activities_attributes"=>{"0"=>{"name"=>"", "id"=>"135"}}, "id"=>"143"}}}, "commit"=>"Update Task list", "id"=>"40"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (2.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+Unpermitted parameters: refill_count, done_count, return_count
+  [1m[35m (75.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTaskk Load (38.7ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1 AND "taskks"."id" IN (132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143)[0m  [["task_list_id", 40]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 124[0m  [["taskk_id", 132]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 125[0m  [["taskk_id", 133]]
+  [1m[36mActivity Load (0.9ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 126[0m  [["taskk_id", 134]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 127[0m  [["taskk_id", 135]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 128[0m  [["taskk_id", 136]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 129[0m  [["taskk_id", 137]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 130[0m  [["taskk_id", 138]]
+  [1m[36mActivity Load (0.7ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 131[0m  [["taskk_id", 139]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 132[0m  [["taskk_id", 140]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 133[0m  [["taskk_id", 141]]
+  [1m[36mActivity Load (0.6ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 134[0m  [["taskk_id", 142]]
+  [1m[36mActivity Load (1.3ms)[0m  [1m[34mSELECT "activities".* FROM "activities" WHERE "activities"."taskk_id" = $1 AND "activities"."id" = 135[0m  [["taskk_id", 143]]
+  [1m[35mSQL (10.0ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "instruction" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["cheque_cash_detail", ""], ["remark", ""], ["instruction", "drtdtrdtydytfghf and "], ["updated_at", "2018-10-28 18:38:59.923337"], ["id", 132]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "instruction" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["cheque_cash_detail", ""], ["remark", ""], ["instruction", " cfghvcjgvnbvand "], ["updated_at", "2018-10-28 18:38:59.936544"], ["id", 133]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "instruction" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["cheque_cash_detail", ""], ["remark", ""], ["instruction", " cvhgfcghcf and "], ["updated_at", "2018-10-28 18:38:59.939529"], ["id", 134]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "instruction" = $3, "updated_at" = $4 WHERE "taskks"."id" = $5[0m  [["cheque_cash_detail", ""], ["remark", ""], ["instruction", " chfchgc and "], ["updated_at", "2018-10-28 18:38:59.942428"], ["id", 135]]
+  [1m[35mSQL (0.8ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.945285"], ["id", 136]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.948599"], ["id", 137]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.951558"], ["id", 138]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.954351"], ["id", 139]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.957173"], ["id", 140]]
+  [1m[35mSQL (1.7ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.960005"], ["id", 141]]
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.964456"], ["id", 142]]
+  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "taskks" SET "cheque_cash_detail" = $1, "remark" = $2, "updated_at" = $3 WHERE "taskks"."id" = $4[0m  [["cheque_cash_detail", ""], ["remark", ""], ["updated_at", "2018-10-28 18:38:59.968143"], ["id", 143]]
+  [1m[35m (35.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/task_lists/40
+Completed 302 Found in 331ms (ActiveRecord: 178.4ms)
+
+
+Started GET "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:09:00 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.7ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (0.8ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  Rendering task_lists/show.html.erb within layouts/application
+  Rendered task_lists/show.html.erb within layouts/application (2.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 2.1ms)
+
+
+  
+SyntaxError (/home/rahul/task/app/views/task_lists/show.html.erb:4: syntax error, unexpected '<'
+<p> Tasks Count: '.freeze;@out...
+^
+/home/rahul/task/app/views/task_lists/show.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+<p> Tasks Count: '.freeze;@output_buffer.appe...
+          ^~~~~~
+/home/rahul/task/app/views/task_lists/show.html.erb:5: unknown regexp option - b
+/home/rahul/task/app/views/task_lists/show.html.erb:5: syntax error, unexpected '<'
+...utput_buffer.safe_append='</b></p>
+...                              ^
+/home/rahul/task/app/views/task_lists/show.html.erb:6: unknown regexp options - trg
+/home/rahul/task/app/views/task_lists/show.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+...rong>Edit</strong> via clicking the Consumer Number</p>
+...                       ^~~~~~~~
+/home/rahul/task/app/views/task_lists/show.html.erb:9: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:10: syntax error, unexpected '<'
+    <th width="40">Name</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:11: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:12: syntax error, unexpected '<'
+    <th width="100">Address</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:13: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:14: syntax error, unexpected '<'
+    <th width="60">Flavors</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:15: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:16: syntax error, unexpected '<'
+    <th width="40">Activity</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:17: unknown regexp options - th
+/home/rahul/task/app/views/task_lists/show.html.erb:18: syntax error, unexpected '<'
+    <th width="60">Priority</th>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:19: unknown regexp options - tr
+/home/rahul/task/app/views/task_lists/show.html.erb:23: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:24: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:25: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:26: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:27: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:28: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:29: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:30: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:31: syntax error, unexpected '<'
+      <td height="80">'.freeze;@outp...
+      ^
+/home/rahul/task/app/views/task_lists/show.html.erb:32: unknown regexp options - td
+/home/rahul/task/app/views/task_lists/show.html.erb:33: syntax error, unexpected '<'
+    </tr>
+    ^
+/home/rahul/task/app/views/task_lists/show.html.erb:35: unknown regexp options - tabl
+/home/rahul/task/app/views/task_lists/show.html.erb:36: syntax error, unexpected '<'
+<br>'.freeze;@output_buffer.to...
+^
+/home/rahul/task/app/views/task_lists/show.html.erb:39: unterminated string meets end of file
+          end
+             ^
+/home/rahul/task/app/views/task_lists/show.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+          end
+             ^):
+  
+app/views/task_lists/show.html.erb:4: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:4: syntax error, unexpected tLABEL, expecting keyword_do or '{' or '('
+app/views/task_lists/show.html.erb:5: unknown regexp option - b
+app/views/task_lists/show.html.erb:5: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:6: unknown regexp options - trg
+app/views/task_lists/show.html.erb:6: syntax error, unexpected tIDENTIFIER, expecting keyword_do or '{' or '('
+app/views/task_lists/show.html.erb:9: unknown regexp options - th
+app/views/task_lists/show.html.erb:10: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:11: unknown regexp options - th
+app/views/task_lists/show.html.erb:12: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:13: unknown regexp options - th
+app/views/task_lists/show.html.erb:14: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:15: unknown regexp options - th
+app/views/task_lists/show.html.erb:16: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:17: unknown regexp options - th
+app/views/task_lists/show.html.erb:18: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:19: unknown regexp options - tr
+app/views/task_lists/show.html.erb:23: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:24: unknown regexp options - td
+app/views/task_lists/show.html.erb:25: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:26: unknown regexp options - td
+app/views/task_lists/show.html.erb:27: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:28: unknown regexp options - td
+app/views/task_lists/show.html.erb:29: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:30: unknown regexp options - td
+app/views/task_lists/show.html.erb:31: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:32: unknown regexp options - td
+app/views/task_lists/show.html.erb:33: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:35: unknown regexp options - tabl
+app/views/task_lists/show.html.erb:36: syntax error, unexpected '<'
+app/views/task_lists/show.html.erb:39: unterminated string meets end of file
+app/views/task_lists/show.html.erb:39: syntax error, unexpected end-of-input, expecting ')'
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.6ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendering /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /home/rahul/.rvm/gems/ruby-2.5.1@tasker/gems/actionpack-5.0.7/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (48.4ms)
+Started GET "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:10:06 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (1.0ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (2.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  Rendering task_lists/show.html.erb within layouts/application
+  Rendered task_lists/show.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.1ms)
+  Rendered layouts/_navigation.html.erb (4.4ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 109ms (Views: 96.5ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/task_lists/40" for 127.0.0.1 at 2018-10-29 00:10:40 +0530
+Processing by TaskListsController#show as HTML
+  Parameters: {"id"=>"40"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTaskList Load (0.4ms)[0m  [1m[34mSELECT  "task_lists".* FROM "task_lists" WHERE "task_lists"."id" = $1 LIMIT $2[0m  [["id", 40], ["LIMIT", 1]]
+  [1m[36mTaskk Load (0.9ms)[0m  [1m[34mSELECT "taskks".* FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  Rendering task_lists/show.html.erb within layouts/application
+  [1m[35m (76.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "taskks" WHERE "taskks"."task_list_id" = $1[0m  [["task_list_id", 40]]
+  Rendered task_lists/show.html.erb within layouts/application (96.4ms)
+  Rendered layouts/_navigation_links.html.erb (0.4ms)
+  Rendered layouts/_nav_links_for_auth.html.erb (1.4ms)
+  Rendered layouts/_navigation.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 202ms (Views: 114.6ms | ActiveRecord: 79.0ms)
+
+

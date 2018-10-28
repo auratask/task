@@ -23,13 +23,13 @@ class TaskListsController < ApplicationController
   end
 
   def show
-    @task_list =TaskList.find(params[:id])
-    @task_list.taskks.each do |x|
+    @list =TaskList.find(params[:id])
+    @list.taskks.each do |x|
         if x.customer_name.nil? 
           Taskk.set_task_parameters(x.id)
         end
       end
-    
+    @task_list = @list
     respond_to do |format|
       format.html
       
