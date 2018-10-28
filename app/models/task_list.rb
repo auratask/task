@@ -5,5 +5,6 @@ class TaskList < ApplicationRecord
 	validates :allocated_to , presence: true 
 	validates :expense , presence: true
 
+	
 end
 

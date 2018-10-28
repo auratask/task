@@ -24,6 +24,12 @@ class TaskListsController < ApplicationController
 
   def show
     @task_list =TaskList.find(params[:id])
+    @task_list.taskks.each do |x|
+        if x.customer_name.nil? 
+          Taskk.set_task_parameters(x.id)
+        end
+      end
+    
     respond_to do |format|
       format.html
       
@@ -41,6 +47,14 @@ class TaskListsController < ApplicationController
   end
 
   def edit
+    @list =TaskList.find(params[:id])
+     
+    @list.taskks.each do |x|
+        if x.customer_name.nil? 
+          Taskk.set_task_parameters(x.id)
+        end
+      end
+    
     @consumer_nos = User.consumer_nos
     @task_list =TaskList.find(params[:id])
   end

@@ -6,7 +6,7 @@ class Taskk < ApplicationRecord
 
 
 require 'csv'
-after_create_commit :set_customer_details, :set_task_parameters
+after_create_commit :set_customer_details #, :set_task_parameters
 #after_save :set_customer_details
 
 #@@customers = User.first.customers
@@ -75,19 +75,7 @@ end
 
 def set_customer_details
 	@task = Taskk.find(self.id)
-	@customer=[]
-	User.customers.each do |x|
-		if x["consumer_no"] == @task.task_consumer_no
-			@customer=x
-		end
-	end
-    @task.customer_name = @customer["name"]
-    @task.instruction = "#{@task.instruction} and #{Taskk.where(:task_consumer_no => @customer["consumer_no"]).second_to_last.remark}"
-    @task.customer_phone_number = @customer["phone_number"]
-    @task.customer_address = @customer["address"] 
-    @task.customer_area = @customer["area"]
-    @task.customer_flavors = @customer["flavors"]
-    @task.customer_machine_count = @customer["machine_count"]
+	
     @xy =TaskList.find(@task.task_list_id)
 	@task.allocated_to = @xy.allocated_to
 	@task.activity = Activity.where(:taskk_id => self.id).first.name
@@ -95,9 +83,22 @@ def set_customer_details
     @task.save
 end
 
-def set_task_parameters
-	@task = Taskk.find(self.id)
-	
+def self.set_task_parameters(param)
+	@task = Taskk.find(param)
+	@customer=[]
+	User.customers.each do |x|
+		if x["consumer_no"] == @task.task_consumer_no
+			@customer=x
+		end
+	end
+    @task.customer_name = @customer["name"]
+    @task.instruction = "#{@task.instruction} and #{Taskk.where(:task_consumer_no => @customer["consumer_no"]).try(:second_to_last).try(:remark) }"
+    @task.customer_phone_number = @customer["phone_number"]
+    @task.customer_address = @customer["address"] 
+    @task.customer_area = @customer["area"]
+    @task.customer_flavors = @customer["flavors"]
+    @task.customer_machine_count = @customer["machine_count"]
+    @task.save
 end
 
 end
