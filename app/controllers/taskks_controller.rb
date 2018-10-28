@@ -28,8 +28,8 @@ class TaskksController < ApplicationController
   end
 
   def index
-  	@tasks = Taskk.all
-  	@customers= User.customers
+  	@tasks = Taskk.all.order(created_at: :desc)
+    @customers= User.customers
   	respond_to do | format|
   	  format.html
   	  format.csv {send_data @tasks.to_csv }

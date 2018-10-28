@@ -6,6 +6,7 @@
 <table border="1" cellpadding="5" cellspacing="5">
   <tr>
     <th>No</th>
+    <th>Date</th>
     <th>Name</th>
     <th>Allocated</th>
     <th>Area</th>
@@ -18,6 +19,7 @@
   <% Taskk.not_done_tasks(@tasks).each do |task| %>
       <tr>
       <td><%= link_to task.task_consumer_no, edit_taskk_path(task) %></td>
+      <td><%= task.created_at.strftime("%d-%m-%y") %></td>
       <td><%= task.customer_name %></td>
       <td><%= task.allocated_to%></td>
       <td><%= task.customer_area %></td>
