@@ -40,7 +40,7 @@ class TaskksController < ApplicationController
 private 
 
    def task_params
-      params.require(:taskk).permit(:id,:task_consumer_no, :customer_name, :status,:cheque_cash_detail, :remark, :instruction, :allocated_to, :priority, activities_attributes:[:id, :name])
+      params.require(:taskk).permit(:id,:task_consumer_no, :customer_name, :status,:cheque_cash_detail, :remark, :instruction, :allocated_to,:refill_count, :done_count, :return_count, :priority, activities_attributes:[:id, :name])
    end
 
 end
