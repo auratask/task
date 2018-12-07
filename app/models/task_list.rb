@@ -4,6 +4,7 @@ class TaskList < ApplicationRecord
 	accepts_nested_attributes_for :taskks , :allow_destroy => true
 	validates :allocated_to , presence: true 
 	validates :expense , presence: true
+	validates :task_list_date , presence: true
 
 	
 end

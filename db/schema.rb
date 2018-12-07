@@ -22,20 +22,6 @@ ActiveRecord::Schema.define(version: 20181028130239) do
     t.integer  "taskk_id"
   end
 
-  create_table "employees", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "memberships", force: :cascade do |t|
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
-    t.integer  "taskk_id"
-    t.string   "memberable_type"
-    t.integer  "memberable_id"
-    t.index ["taskk_id"], name: "index_memberships_on_taskk_id", using: :btree
-  end
-
   create_table "task_consumer_nos", force: :cascade do |t|
     t.integer  "task_consumer_no_id"
     t.integer  "activity_id"
@@ -90,5 +76,4 @@ ActiveRecord::Schema.define(version: 20181028130239) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
-  add_foreign_key "memberships", "taskks"
 end
